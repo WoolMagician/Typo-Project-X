@@ -1,0 +1,546 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: EventDescriptions_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: c1c1edb403799dc458ad0e1a96541669, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 10644826054656
+    m_Localized: Find the bracelet stolen by the Koma Pigs.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65524686848
+    m_Localized: Blow away the thick fog.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644830248960
+    m_Localized: Meet the 100 Year Old Wise Man.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644834443264
+    m_Localized: Collect the chicks inside the eggs.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644834443265
+    m_Localized: Learn about what happened when the Evil Pigs came to town.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644834443266
+    m_Localized: Learn how to speak dwarf language.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644834443267
+    m_Localized: Find the missing dwarves in the forest.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644838637568
+    m_Localized: Look for the child that is lost in the forest.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644838637569
+    m_Localized: Meet the Dwarf Elder.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644838637570
+    m_Localized: "\tThe bag that has the power to seal the Evil Pigs."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644838637571
+    m_Localized: Can you make a convincing smile?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644842831872
+    m_Localized: Show him how to cry.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644842831873
+    m_Localized: Head to Phoenix Mountain.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644842831874
+    m_Localized: Find the lost baby mouse.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644842831875
+    m_Localized: Head through the Haunted Mansion to Baccus Lake.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644847026176
+    m_Localized: Brave the Haunted Mansion to fix the pump.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644847026177
+    m_Localized: Free the 1,000 Year Old Man from captivity.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644847026178
+    m_Localized: Find all the pieces of the picture to get an item.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644847026179
+    m_Localized: Find the large key that fits the door.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644851220480
+    m_Localized: Find the small key that fits the door.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644851220481
+    m_Localized: Break the spell and listen to the 1 000 year old man's story.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644851220482
+    m_Localized: Find the Evil Pig Bag to restore Baccus Village.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644851220483
+    m_Localized: Find the Evil Pig Bag to break the spell on the Haunted Mansion.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644855414784
+    m_Localized: Wonder what's inside the guarded treasure chest.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644855414785
+    m_Localized: "\tFind the Pig Bag for the Stormy Pig."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644855414786
+    m_Localized: Seal the Evil Pig's powers in the bag.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644855414787
+    m_Localized: Find the Evil Pig Pag for the Fire Evil Pig.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644855414788
+    m_Localized: A locked door with a large grin.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644859609088
+    m_Localized: "\tSeal the Evil Pig's powers in the bag."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644859609089
+    m_Localized: Seal the powers of the Evil Pig in the bag.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644859609090
+    m_Localized: Collect five Bunk Flowers for the Phoenix.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644859609091
+    m_Localized: Meet the Phoenix at Stormy Mountain.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644863803392
+    m_Localized: Find Charles and return the miner's hat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644863803393
+    m_Localized: Quench Charles' thirst to learn a new ability.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644863803394
+    m_Localized: Need to learn how to swim.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644863803395
+    m_Localized: A bomb that looks like a coconut?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644867997696
+    m_Localized: Find a way to open the rusted door.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644867997697
+    m_Localized: Fix the clock tower.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644867997698
+    m_Localized: The revived machine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644867997699
+    m_Localized: Seal the powers of the Evil Pig in the bag.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644872192000
+    m_Localized: Find the Evil Pig Bag for the Jungle Pig.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644872192001
+    m_Localized: Seal the powers of the Evil Pig in the bag.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644872192002
+    m_Localized: The underground world comes back to life.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644872192003
+    m_Localized: Visit the 10,000 Year Old Man.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644876386304
+    m_Localized: A beautiful necklace that belongs to the Mermaid.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644876386305
+    m_Localized: Learn to dive underwater.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644876386306
+    m_Localized: Find the 10,000 Year Old Man's Math Beads.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644876386307
+    m_Localized: Find the Evil Pig Bag for the Underwater Pig.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644876386308
+    m_Localized: Seal the powers of the Evil Pig in the bag.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644880580608
+    m_Localized: What tool should I use to open this door?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644880580609
+    m_Localized: Find the unbreakable wire at the Haunted Mansion.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644880580610
+    m_Localized: The Million Year Old Man knows where it comes from.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644880580611
+    m_Localized: A digger trying to dig a new path.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644884774912
+    m_Localized: Seal the powers of the Evil Pig in the bag.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644884774913
+    m_Localized: The Million Year Old Man's wish is to seal all the Evil Pigs...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644884774914
+    m_Localized: Seal the powers of the Master Evil Pig.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644884774915
+    m_Localized: Find seven friends to open the last gate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644888969216
+    m_Localized: Seal the powers of the final Evil Pig!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644888969217
+    m_Localized: Bring the frog home.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644888969218
+    m_Localized: Find some food for the monkey.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644888969219
+    m_Localized: The bumpy road beyond the fence.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644893163520
+    m_Localized: Who is this mysterious person?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644893163521
+    m_Localized: Collect AP points for something special.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644893163522
+    m_Localized: Get the Tear Bottle from the Yellow Bonsugee.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644893163523
+    m_Localized: Re-light the lantern.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644897357824
+    m_Localized: Break up the fight among the dwarves.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644897357825
+    m_Localized: The thief is trying to escape.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644897357826
+    m_Localized: Enjoy the view.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644897357827
+    m_Localized: Race the thief up the hill for his treasure.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644897357828
+    m_Localized: Fight the monster that lives in the Mushroom Forest.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644901552128
+    m_Localized: A mushroom that can make you laugh or cry.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644901552129
+    m_Localized: A dangerous slide.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644901552130
+    m_Localized: Put the two together for something you've never seen before.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644901552131
+    m_Localized: A mushroom that returns you to normal.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644905746432
+    m_Localized: Find the rumored treasures.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644905746433
+    m_Localized: I've seen this mansion before...but where?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644905746434
+    m_Localized: Find and return Charles' pants.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644905746435
+    m_Localized: Meet the Red Fortune Teller.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644909940736
+    m_Localized: Revive the statues.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644909940737
+    m_Localized: Can't stop the tears from flowing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644909940738
+    m_Localized: Crush the fruit that's killing the forest plants.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644909940739
+    m_Localized: Where should I plant the seeds?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644914135040
+    m_Localized: Plant flower seeds to grow a beautiful flower garden.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644914135041
+    m_Localized: How could the path take me here?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644914135042
+    m_Localized: Find the Healing Herbs to heal Baron's wounds...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644914135043
+    m_Localized: A locked Door with a sad face.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644918329344
+    m_Localized: Find the Jewel of Fire to unleash the hidden powers from within.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644918329345
+    m_Localized: Play hide and go seek with Yan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644918329346
+    m_Localized: Find something for this person to eat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644918329347
+    m_Localized: The wind is too strong to open the door.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644918329348
+    m_Localized: Collect as many Leaf Butterfies as you can.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644922523648
+    m_Localized: Bring back a bucket of wine for the GoGoCar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644922523649
+    m_Localized: The Motocross Goal!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644922523650
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644922523651
+    m_Localized: An honorable medal for exceeding the existing second winner's record.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644926717952
+    m_Localized: Bring him a Funga.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644926717953
+    m_Localized: Visit Mizuno in the Village of All Beginnings.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644926717954
+    m_Localized: Need a ride...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644926717955
+    m_Localized: Something was hidden from view.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644930912256
+    m_Localized: Go to the Wise Old Tree.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644930912257
+    m_Localized: Find the fruit from the Tree of Knowledge for the dwarf healer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644930912258
+    m_Localized: Find the seaweed to keep the Dwarf Village healthy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644930912259
+    m_Localized: Help the injured puppy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644935106560
+    m_Localized: This dog must possess some special, hidden power...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644935106561
+    m_Localized: Will the tears revive the fountain?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644935106562
+    m_Localized: Find and return the Crystal Balls and Mirror to the witch.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644935106563
+    m_Localized: Find the remaining crystal balls and return them to their owner.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644939300864
+    m_Localized: Who's mirror is this?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644939300865
+    m_Localized: Make magic candy by combining the six items!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644939300866
+    m_Localized: Visit the Famous Digger after he's finished digging his hole.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644939300867
+    m_Localized: Tool receives a power up!?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644943495168
+    m_Localized: The cute witch needs something for her cold.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644943495169
+    m_Localized: Find the underground treasure.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644943495170
+    m_Localized: Gather ten slices of cheese and return them to the collector.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644943495171
+    m_Localized: Find the Jewel of Water to unleash other hidden powers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644943495172
+    m_Localized: Collect the five rare items.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644947689472
+    m_Localized: Catch a Mighty Fish?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644947689473
+    m_Localized: To know the best of yourself, seek fortune tellers!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644947689474
+    m_Localized: Jump on all of the Pump Rocks to feed the Tree of Knowledge.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644947689475
+    m_Localized: Find the Jewel of Wind to unleash your remaining hidden powers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644951883776
+    m_Localized: A sweet smell is coming from the burning leaves.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644951883777
+    m_Localized: Beautiful flowers bloom from dangerous plants.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644951883778
+    m_Localized: Bring Yan his lunch.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644951883779
+    m_Localized: Find what the thief lost and return it to him.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644956078080
+    m_Localized: Return what the thief left behind.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644956078081
+    m_Localized: He says you have his treasure.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644956078082
+    m_Localized: A marvelous medal for exceeding the existing champion's record.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644956078083
+    m_Localized: The barrel sank all the way to the bottom.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644960272384
+    m_Localized: A Baby Koma Pig?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644960272385
+    m_Localized: What's inside the Flower Tower?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14655465676800
+    m_Localized: Cleared!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

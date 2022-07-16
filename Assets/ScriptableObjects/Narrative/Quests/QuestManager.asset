@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb94c6f76d36af4b8ac892f0d3501a3, type: 3}
+  m_Name: QuestManager
+  m_EditorClassIdentifier: 
+  _questlines:
+  - {fileID: 11400000, guid: 0aacece112c9c9845adb9d69c63b9a99, type: 2}
+  _inventory: {fileID: 11400000, guid: abfad7b16e832cb4db83a0ab9897447a, type: 2}
+  _winningItem: {fileID: 0}
+  _losingItem: {fileID: 0}
+  _continueWithStepEvent: {fileID: 11400000, guid: 9c8b3b8837662d943a45e7f221c7acd9,
+    type: 2}
+  _endDialogueEvent: {fileID: 11400000, guid: e71a657078015cb4098fc04820caaedb, type: 2}
+  _makeWinningChoiceEvent: {fileID: 11400000, guid: 58001b8c6dbf8b743b187230f3fe28d7,
+    type: 2}
+  _makeLosingChoiceEvent: {fileID: 11400000, guid: 2ad74360ad98c604b8f00e42389168c6,
+    type: 2}
+  _playCompletionDialogueEvent: {fileID: 11400000, guid: 316dcf9cf95d3154ca8a293c9d2045ec,
+    type: 2}
+  _playIncompleteDialogueEvent: {fileID: 11400000, guid: 2fc54b73460c77d4c932bed6edd721e3,
+    type: 2}
+  _startWinningCutscene: {fileID: 0}
+  _startLosingCutscene: {fileID: 0}
+  _giveItemEvent: {fileID: 11400000, guid: a4770c02a8b14ee44adda2e9201c5234, type: 2}
+  _rewardItemEvent: {fileID: 11400000, guid: 5b0c57a5bfe9b2a4989c8a0eeea5c262, type: 2}
+  saveSystem: {fileID: 11400000, guid: 3b21fdba65830e04a886877114db12d7, type: 2}

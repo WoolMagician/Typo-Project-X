@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24568583bdd63774f9a2be4c46e4c117, type: 3}
+  m_Name: ChannelPlayMusic
+  m_EditorClassIdentifier: 
+  _guid: 846f7301734b2754fa9241617af325ff
+  description: "Requests to play a song travel on this channel. The AudioManager
+    picks\r\n    them up and fades in the new song."

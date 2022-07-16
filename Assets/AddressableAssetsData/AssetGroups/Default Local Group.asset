@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 3ff32e32ff6ab704e8680e6d16596d77
+  m_SerializeEntries:
+  - m_GUID: bc5b8b3ecd221ea42b91b2cea69daf48
+    m_Address: Assets/Scenes/Levels/SIDE SCROLLING/01 The Village of All Beginnings/01
+      The Village of All Beginnings.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ae693c3b642f87d4181676d48a8ed4df
+    m_Address: Assets/Scenes/Menus/00 Main Menu/00 Main Menu.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e292e45b96673a64cad9170f1452d67c
+    m_Address: Assets/Scenes/Globals/Gameplay.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6f28e3002eb1b8d448c350b8b2ad6710
+    m_Address: Assets/Scenes/Globals/PersistentManagers.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: de90dd433091eb0449c424a61acbd64d
+    m_Address: Assets/ScriptableObjects/EventChannels/SceneManagement/LoadMenuEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6ccea3c527b7f1a46b4cfdffa4763975
+    m_Address: Assets/ScriptableObjects/EventChannels/SceneManagement/ColdStartupEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 20b8aa97256aa8d49beccd1da87c802b
+    m_Address: Assets/ScriptableObjects/EventChannels/SceneManagement/OnSceneReady.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4fbe0ed8eda640f49a4b996ab5865be4
+    m_Address: Assets/ScriptableObjects/EventChannels/SceneManagement/LoadLocationEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a74abe065f67d3b43a22c3dedbafaf12, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fc61b3b9432ffc545adf9227c4b30f03, type: 2}
+    - {fileID: 11400000, guid: 6120e90edfda0a74b8441f07bca4b36e, type: 2}

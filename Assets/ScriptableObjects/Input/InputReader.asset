@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b60bc75729345e499376a955d18ec9c, type: 3}
+  m_Name: InputReader
+  m_EditorClassIdentifier: 
+  _guid: 5252c9d2b98330848b3be23d4f0ad889
+  description: Centralised location where all input is read. Any object in need of
+    reading input can reference this SO and just hook into its event delegates.
+  _gameStateManager: {fileID: 11400000, guid: 3c21365b46cf3434b80d629a1ee6f379, type: 2}

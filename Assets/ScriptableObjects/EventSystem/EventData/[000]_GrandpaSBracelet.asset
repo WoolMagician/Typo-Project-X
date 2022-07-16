@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04037fcbf64d43c438d8cb0b77fcb566, type: 3}
+  m_Name: '[000]_GrandpaSBracelet'
+  m_EditorClassIdentifier: 
+  _guid: fd81f7f66afbf61499d2a6411349176c
+  _id: 0
+  _name:
+    m_TableReference:
+      m_TableCollectionName: GUID:a5c131b81225f0048a2eb351bc695be2
+    m_TableEntryReference:
+      m_KeyId: 11761509163008
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: EventDescriptions
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: GrandpaSBracelet
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _eventType: 0
+  _cleared: 0
+  _occurred: 1
+  _occurrAPGain: 0
+  _clearAPGain: 0
+  references:
+    version: 1

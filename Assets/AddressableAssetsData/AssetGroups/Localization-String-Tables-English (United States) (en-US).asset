@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-English (United States) (en-US)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-English (United States) (en-US)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 5d85a7450f0d870409378ca7c9c18123
+  m_SerializeEntries:
+  - m_GUID: ae025b8a07bac914994fc96738089f57
+    m_Address: InventoryItemName_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
+  - m_GUID: d9b313d36762a8a4f826a475e4a27007
+    m_Address: InventoryItemDescription_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
+  - m_GUID: d8cdc835dfc077047a89cfb578efb389
+    m_Address: Dialogues_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
+  - m_GUID: 7afa460989452bf4a91ac5230fa6bd7d
+    m_Address: Questline Dialogue_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
+  - m_GUID: ea1f427bbbf1e8c48b9b1d234c1c00de
+    m_Address: Actors_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
+  - m_GUID: 6a969b44433b56045a3b22364326df61
+    m_Address: UI Misc_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
+  - m_GUID: 5989e42876d4e954e8601dde8930f8da
+    m_Address: EventNames_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
+  - m_GUID: fcf852bc6a3909041ad7dcea545e3d12
+    m_Address: EventDescriptions_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: a74abe065f67d3b43a22c3dedbafaf12, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1fd96cc19dca993498ff1dba84cf3ad5, type: 2}
+    - {fileID: 11400000, guid: 1cab4d438ec968e4986fad8d7a338395, type: 2}

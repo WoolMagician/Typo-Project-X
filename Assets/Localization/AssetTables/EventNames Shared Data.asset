@@ -1,0 +1,552 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: EventNames Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: EventNames
+  m_TableCollectionNameGuidString: a5c131b81225f0048a2eb351bc695be2
+  m_Entries:
+  - m_Id: 69014347776
+    m_Key: ClearTheFog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761509163008
+    m_Key: GrandpaSBracelet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761517551616
+    m_Key: The100YearOldWiseMan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761517551617
+    m_Key: InsideTheKokkaEggs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761521745920
+    m_Key: TaleOfTheEvilPigs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761521745921
+    m_Key: BeginnerSDwarfLanguage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761521745922
+    m_Key: SaveTheDwarves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761525940224
+    m_Key: ALostChild
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761525940225
+    m_Key: DwarfElder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761525940226
+    m_Key: TheEvilPigBag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761525940227
+    m_Key: TheWorldSGreatestSmile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761530134528
+    m_Key: TheWorldSGreatestPout
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761530134529
+    m_Key: ToPhoenixMountain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761530134530
+    m_Key: WhereSTheBabyMouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761530134531
+    m_Key: RoadToBaccusLake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761530134532
+    m_Key: ADrinkForGrownups
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761534328832
+    m_Key: The1000YearOldMan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761534328833
+    m_Key: PaintingOfABigKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761534328834
+    m_Key: ALargeKeyHole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761538523136
+    m_Key: ASmallKeyHole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761538523137
+    m_Key: BreakTheMagicEgg
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761538523138
+    m_Key: TheMousePigBag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761538523139
+    m_Key: TheHauntedPigBag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761538523140
+    m_Key: APreciousTreasureChest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761542717440
+    m_Key: AStormyPigBag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761542717441
+    m_Key: PhoenixMountain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761542717442
+    m_Key: TheFirePigBag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761542717443
+    m_Key: Smile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761546911744
+    m_Key: LavaCaves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761546911745
+    m_Key: TheHauntedMansion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761546911746
+    m_Key: ThePhoenixSFavorite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761546911747
+    m_Key: TheMasterOfTheSkies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761551106048
+    m_Key: FindCharles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761551106049
+    m_Key: ARefreshingDrink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761551106050
+    m_Key: ICanTSwim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761551106051
+    m_Key: INeedABomb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761555300352
+    m_Key: BreakTheRustyDoor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761555300353
+    m_Key: WeNeedPower
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761555300354
+    m_Key: TheCivilizationMachine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761555300355
+    m_Key: BaccusVillage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761555300356
+    m_Key: TheJunglePigBag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761559494656
+    m_Key: TheDeepJunglePig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761559494657
+    m_Key: WhatSUnderTheForest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761559494658
+    m_Key: The10000YearOldMan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761559494659
+    m_Key: TheMermaidSNecklace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761563688960
+    m_Key: WhatSUnderwater
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761563688961
+    m_Key: The10MathBeads
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761563688962
+    m_Key: TheUnderwaterPigBag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761563688963
+    m_Key: TrickVillage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761567883264
+    m_Key: TheThiefSDoor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761567883265
+    m_Key: UnbreakableWire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761567883266
+    m_Key: SourceOfEvilMagic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761567883267
+    m_Key: DigLikeAMole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761572077568
+    m_Key: The100FlowerForest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761572077569
+    m_Key: MillionYearOldWish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761572077570
+    m_Key: The8ThEvilPigBag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761572077571
+    m_Key: SevenFriends
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761576271872
+    m_Key: ARealEvilPig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761576271873
+    m_Key: TakeMeHome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761576271874
+    m_Key: AHungryMonkey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761576271875
+    m_Key: MotocrossCourse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761576271876
+    m_Key: WhoAreYou
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761580466176
+    m_Key: TheAPBox
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761580466177
+    m_Key: INeedATearBottle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761580466178
+    m_Key: WhereDTheLightsGo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761580466179
+    m_Key: StopTheFight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761584660480
+    m_Key: TheGreatEscape
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761584660481
+    m_Key: LookAndSee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761584660482
+    m_Key: ReadySetGo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761584660483
+    m_Key: MonsterHunt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761588854784
+    m_Key: TheMysteriousMushroom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761588854785
+    m_Key: LeafSlider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761588854786
+    m_Key: RedBlue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761588854787
+    m_Key: ASafeMushroom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761593049088
+    m_Key: TreasuresFromTheMansion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761593049089
+    m_Key: AFamiliarLookingMansion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761593049090
+    m_Key: CharlesPants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761593049091
+    m_Key: TheRedFortuneTeller
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761597243392
+    m_Key: TheBrokenFountain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761597243393
+    m_Key: CanTStopCrying
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761597243394
+    m_Key: DeathFruitJuice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761597243395
+    m_Key: FlowerSeeds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761597243396
+    m_Key: PlantAFlowerGarden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761601437696
+    m_Key: WhereDidIComeFrom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761601437697
+    m_Key: HealingHerbsForBaron
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761601437698
+    m_Key: CryBaby
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761601437699
+    m_Key: RedHiddenPowers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761605632000
+    m_Key: HideAndGoSeek
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761605632001
+    m_Key: IMSoHungry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761605632002
+    m_Key: WhenTheWindDiesDown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761605632003
+    m_Key: LeafButterflies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761609826304
+    m_Key: FoodForFuel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761609826305
+    m_Key: TheMermaidSSingingRock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761609826306
+    m_Key: IWantABronzeMedal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761609826307
+    m_Key: IWantASilverMedal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761614020608
+    m_Key: WhatSAFunga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761614020609
+    m_Key: TheCuteWitch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761614020610
+    m_Key: LetSRideTheRaft
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761614020611
+    m_Key: WhatIsThis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761618214912
+    m_Key: TreeOfKnowledgeKnows
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761618214913
+    m_Key: DeliciousKnowledgeFruit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761618214914
+    m_Key: SeaweedForYourHealth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761618214915
+    m_Key: AManSBestFriend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761622409216
+    m_Key: BaronSStrength
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761622409217
+    m_Key: TearsFromAFlower
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761622409218
+    m_Key: WhatTheWitchLost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761622409219
+    m_Key: LostAndFound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761622409220
+    m_Key: AMagicMirror
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761626603520
+    m_Key: LetSMakeCandy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761626603521
+    m_Key: TheFamousDigger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761626603522
+    m_Key: PowerUpForTools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761626603523
+    m_Key: TakeTwoOfThese
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761630797824
+    m_Key: UndergroundTreasure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761630797825
+    m_Key: SomeCheesePlease
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761630797826
+    m_Key: BlueHiddenPowers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761630797827
+    m_Key: 5GoldenItems
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761634992128
+    m_Key: MightyFishFood
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761634992129
+    m_Key: TheBlueFortuneTeller
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761634992130
+    m_Key: ThePumpRocks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761634992131
+    m_Key: GreenHiddenPowers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761639186432
+    m_Key: SomethingSCookin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761639186433
+    m_Key: BitingPlantFlower
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761639186434
+    m_Key: TakeOut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761639186435
+    m_Key: TheTroubledThief
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761639186436
+    m_Key: WhatTheThiefForgot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761643380736
+    m_Key: TheBossTreasure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761643380737
+    m_Key: IWantAGoldMedal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761643380738
+    m_Key: WhereTheBarrelRolls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761643380739
+    m_Key: PeachFlowerGas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761647575040
+    m_Key: FlowerTower
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16828601688064
+    m_Key: Cleared
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1656874690358

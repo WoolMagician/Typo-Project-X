@@ -1,0 +1,546 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: EventNames_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: a5c131b81225f0048a2eb351bc695be2, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 11761509163008
+    m_Localized: Grandpa's Bracelet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69014347776
+    m_Localized: Clear the Fog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761517551616
+    m_Localized: The 100 Year|Old Wise Man
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761517551617
+    m_Localized: Inside the Kokka Eggs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761521745920
+    m_Localized: Tale of the Evil Pigs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761521745921
+    m_Localized: Beginner's Dwarf Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761521745922
+    m_Localized: Save the Dwarves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761525940224
+    m_Localized: A Lost Child
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761525940225
+    m_Localized: Dwarf Elder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761525940226
+    m_Localized: The Evil Pig Bag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761525940227
+    m_Localized: The World's Greatest Smile!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761530134528
+    m_Localized: The World's Greatest Pout?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761530134529
+    m_Localized: To Phoenix Mountain...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761530134530
+    m_Localized: Where's the Baby Mouse?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761530134531
+    m_Localized: Road to Baccus Lake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761530134532
+    m_Localized: A Drink for Grownups
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761534328832
+    m_Localized: The 1,000 Year Old Man?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761534328833
+    m_Localized: Painting of a Big Key?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761534328834
+    m_Localized: A Large Key Hole!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761538523136
+    m_Localized: A Small Key Hole!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761538523137
+    m_Localized: Break the Magic Egg!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761538523138
+    m_Localized: The Mouse Pig Bag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761538523139
+    m_Localized: The Haunted Pig Bag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761538523140
+    m_Localized: A Precious Treasure Chest?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761542717440
+    m_Localized: A Stormy Pig Bag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761542717441
+    m_Localized: Phoenix Mountain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761542717442
+    m_Localized: The Fire Pig Bag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761542717443
+    m_Localized: Smile!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761546911744
+    m_Localized: Lava Caves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761546911745
+    m_Localized: The Haunted Mansion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761546911746
+    m_Localized: The Phoenix's Favorite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761546911747
+    m_Localized: The Master of the Skies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761551106048
+    m_Localized: Find Charles!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761551106049
+    m_Localized: A Refreshing Drink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761551106050
+    m_Localized: I Can't Swim...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761551106051
+    m_Localized: I Need a Bomb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761555300352
+    m_Localized: Break the Rusty Door!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761555300353
+    m_Localized: We Need Power...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761555300354
+    m_Localized: The Civilization Machine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761555300355
+    m_Localized: Baccus Village
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761555300356
+    m_Localized: The Jungle Pig Bag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761559494656
+    m_Localized: The Deep Jungle Pig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761559494657
+    m_Localized: What's Under the Forest?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761559494658
+    m_Localized: The 10,000 Year Old Man
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761559494659
+    m_Localized: The Mermaid's Necklace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761563688960
+    m_Localized: What's Underwater?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761563688961
+    m_Localized: The 10 Math Beads
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761563688962
+    m_Localized: The Underwater Pig Bag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761563688963
+    m_Localized: Trick Village
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761567883264
+    m_Localized: The Thief's Door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761567883265
+    m_Localized: Unbreakable Wire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761567883266
+    m_Localized: Source of Evil Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761567883267
+    m_Localized: Dig Like a Mole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761572077568
+    m_Localized: The 100 Flower Forest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761572077569
+    m_Localized: Million Year Old Wish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761572077570
+    m_Localized: The 8th Evil Pig Bag?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761572077571
+    m_Localized: Seven Friends
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761576271872
+    m_Localized: A Real Evil Pig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761576271873
+    m_Localized: Take Me Home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761576271874
+    m_Localized: A Hungry Monkey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761576271875
+    m_Localized: Motocross Course
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761576271876
+    m_Localized: Who are you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761580466176
+    m_Localized: The AP Box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761580466177
+    m_Localized: I Need a Tear Bottle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761580466178
+    m_Localized: Where'd the Lights Go?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761580466179
+    m_Localized: Stop the Fight!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761584660480
+    m_Localized: The Great Escape
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761584660481
+    m_Localized: Look and See?!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761584660482
+    m_Localized: Ready, Set, Go!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761584660483
+    m_Localized: Monster Hunt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761588854784
+    m_Localized: The Mysterious Mushroom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761588854785
+    m_Localized: Leaf Slider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761588854786
+    m_Localized: Red + Blue = ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761588854787
+    m_Localized: A Safe Mushroom?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761593049088
+    m_Localized: Treasures from the Mansion?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761593049089
+    m_Localized: A Familiar Looking Mansion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761593049090
+    m_Localized: Charles' Pants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761593049091
+    m_Localized: The Red Fortune Teller
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761597243392
+    m_Localized: The Broken Fountain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761597243393
+    m_Localized: Can't Stop Crying
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761597243394
+    m_Localized: Death Fruit Juice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761597243395
+    m_Localized: Flower Seeds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761597243396
+    m_Localized: Plant a Flower Garden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761601437696
+    m_Localized: Where did I come from?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761601437697
+    m_Localized: Healing Herbs for Baron
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761601437698
+    m_Localized: Cry Baby
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761601437699
+    m_Localized: Red Hidden Powers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761605632000
+    m_Localized: Hide and Go Seek
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761605632001
+    m_Localized: I'm So Hungry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761605632002
+    m_Localized: When the Wind Dies Down...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761605632003
+    m_Localized: Leaf Butterflies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761609826304
+    m_Localized: Food for Fuel?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761609826305
+    m_Localized: The Mermaid's Singing Rock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761609826306
+    m_Localized: I Want a Bronze Medal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761609826307
+    m_Localized: I Want a Silver Medal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761614020608
+    m_Localized: What's a Funga?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761614020609
+    m_Localized: The Cute Witch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761614020610
+    m_Localized: Let's Ride the Raft!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761614020611
+    m_Localized: What is this?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761618214912
+    m_Localized: Tree of Knowledge Knows
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761618214913
+    m_Localized: Delicious Knowledge Fruit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761618214914
+    m_Localized: Seaweed for Your Health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761618214915
+    m_Localized: A Man's Best Friend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761622409216
+    m_Localized: Baron's Strength
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761622409217
+    m_Localized: Tears from a Flower
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761622409218
+    m_Localized: What the Witch Lost...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761622409219
+    m_Localized: Lost and Found
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761622409220
+    m_Localized: A Magic Mirror?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761626603520
+    m_Localized: Let's Make Candy!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761626603521
+    m_Localized: The Famous Digger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761626603522
+    m_Localized: Power Up for Tools!?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761626603523
+    m_Localized: Take Two of These
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761630797824
+    m_Localized: Underground Treasure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761630797825
+    m_Localized: Some Cheese Please
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761630797826
+    m_Localized: Blue Hidden Powers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761630797827
+    m_Localized: 5 Golden Items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761634992128
+    m_Localized: Mighty Fish Food
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761634992129
+    m_Localized: The Blue Fortune Teller
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761634992130
+    m_Localized: The Pump Rocks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761634992131
+    m_Localized: Green Hidden Powers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761639186432
+    m_Localized: Something's Cookin'?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761639186433
+    m_Localized: Biting Plant Flower
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761639186434
+    m_Localized: Take Out
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761639186435
+    m_Localized: The Troubled|Thief
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761639186436
+    m_Localized: What the Thief Forgot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761643380736
+    m_Localized: The Boss' Treasure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761643380737
+    m_Localized: I Want a Gold Medal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761643380738
+    m_Localized: Where The Barrel Rolls...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761643380739
+    m_Localized: Peach Flower Gas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11761647575040
+    m_Localized: Flower Tower
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16828601688064
+    m_Localized: Clear!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1
