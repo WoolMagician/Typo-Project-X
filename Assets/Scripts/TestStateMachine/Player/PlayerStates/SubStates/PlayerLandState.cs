@@ -8,6 +8,12 @@ public class PlayerLandState : PlayerGroundedState
     {
     }
 
+    public override void Enter()
+    {
+        base.Enter();
+        player.Anim.SetFloat("yVelocity", 0);
+    }
+
     public override void LogicUpdate()
     {
         base.LogicUpdate();

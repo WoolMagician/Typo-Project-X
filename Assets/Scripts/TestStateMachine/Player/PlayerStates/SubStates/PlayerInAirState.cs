@@ -86,7 +86,7 @@ public class PlayerInAirState : PlayerState
 
         CheckJumpMultiplier();
 
-        if (isGrounded && core.Movement.CurrentVelocity.y < 0.01f)
+        if (isGrounded)
         {            
             stateMachine.ChangeState(player.LandState);
         }

@@ -16,6 +16,7 @@ public class PlayerMoveState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
+        player.RB.drag = 0f;
     }
 
     public override void Exit()

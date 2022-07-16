@@ -105,25 +105,35 @@ public class Movement : CoreComponent
 
     public Vector3 AdjustMotionVectorToGroundSlope(Vector3 groundNormal, Vector3 motionVector)
     {
-        float currentSlope = this.GetSlopeAngle(groundNormal);
-
-        var slopeRotation = Quaternion.FromToRotation(this.transform.up, groundNormal);
-        var adjustedVelocity = slopeRotation * motionVector;
-
-        Vector3 groundParallel = Vector3.Cross(this.transform.up, groundNormal);
+        float slopeAngle = this.GetSlopeAngle(groundNormal);
+        Quaternion slopeRotation = this.GetSlopeRotation(groundNormal);
+        Vector3 adjustedVelocity = slopeRotation * motionVector;
+        Vector3 groundParallel = Vector3.Cross(RB.transform.up, groundNormal);
         Vector3 slopeParallel = Vector3.Cross(groundParallel, groundNormal);
 
-        if (currentSlope > 55f) return motionVector + slopeParallel.normalized / 3f;
+        if (slopeAngle > 55f) return motionVector + slopeParallel.normalized / 3f;
         if (adjustedVelocity.y < 0) { return adjustedVelocity; }
 
         return motionVector;
 
     }
 
-    float GetSlopeAngle(Vector3 normal)
+    public float GetSlopeAngle(Vector3 normal)
     {
-        return Mathf.Round(Vector3.Angle(normal, this.transform.up));
+        return Mathf.Round(Vector3.Angle(normal, RB.transform.up));
     }
+
+    public Quaternion GetSlopeRotation(Vector3 groundNormal)
+    {
+        return Quaternion.FromToRotation(RB.transform.up, groundNormal);
+    }
+
+    public Vector3 GetSlopeParallel(Vector3 groundNormal)
+    {
+        Vector3 groundParallel = Vector3.Cross(RB.transform.up, groundNormal);
+        Vector3 slopeParallel = Vector3.Cross(groundParallel, groundNormal);
+        return slopeParallel;
+    }    
 
     public void Flip()
     {

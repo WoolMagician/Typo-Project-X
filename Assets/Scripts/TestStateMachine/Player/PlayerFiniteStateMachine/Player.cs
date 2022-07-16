@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public PlayerStateMachine StateMachine { get; private set; }
 
     public PlayerIdleState IdleState { get; private set; }
+    public PlayerSlopeSlideState SlopeSlideState { get; private set; }
     public PlayerMoveState MoveState { get; private set; }
     public PlayerJumpState JumpState { get; private set; }
     public PlayerInAirState InAirState { get; private set; }
@@ -31,7 +32,7 @@ public class Player : MonoBehaviour
 
     public Rigidbody RB { get; private set; }
 
-    public CharacterController CharacterController { get; private set; }
+    //public CharacterController CharacterController { get; private set; }
     public CapsuleCollider MovementCollider { get; private set; }
 
     #endregion
@@ -49,6 +50,7 @@ public class Player : MonoBehaviour
         StateMachine = new PlayerStateMachine();
 
         IdleState = new PlayerIdleState(this,"idle");
+        SlopeSlideState = new PlayerSlopeSlideState(this, "slopeSlideState");
         MoveState = new PlayerMoveState(this, "move");
         JumpState = new PlayerJumpState(this,"inAir");
         InAirState = new PlayerInAirState(this, "inAir");
@@ -63,8 +65,8 @@ public class Player : MonoBehaviour
     private void Start()
     {
         InputHandler = GetComponent<PlayerInputHandler>();
-        //RB = GetComponent<Rigidbody>();
-        CharacterController = GetComponent<CharacterController>();
+        RB = GetComponent<Rigidbody>();
+        //CharacterController = GetComponent<CharacterController>();
         MovementCollider = GetComponent<CapsuleCollider>();
         StateMachine.Initialize(IdleState);
     }

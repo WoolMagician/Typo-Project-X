@@ -7,7 +7,7 @@ public class PlayerGroundedState : PlayerState
 
     protected bool isTouchingCeiling;
 
-    private bool JumpInput;
+    protected bool JumpInput;
     private bool grabInput;
     private bool isGrounded;
     private bool isTouchingWall;
@@ -34,9 +34,16 @@ public class PlayerGroundedState : PlayerState
         player.AnimateCameraChannel.RaiseEvent(0);
     }
 
+    public override void Exit()
+    {
+        base.Exit();
+    }
+
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
+        float slopeAngle = core.Movement.GetSlopeAngle(core.CollisionSenses.groundNormal);
 
         xInput = player.InputHandler.NormInputX;
         yInput = player.InputHandler.NormInputY;
@@ -57,10 +64,10 @@ public class PlayerGroundedState : PlayerState
         {
             stateMachine.ChangeState(player.WallGrabState);
         }
-        //else if (dashInput && player.DashState.CheckIfCanDash() && !isTouchingCeiling)
-        //{
-        //    stateMachine.ChangeState(player.DashState);
-        //}
+        else if (xInput == 0 && slopeAngle >= 5f)
+        {
+            stateMachine.ChangeState(player.SlopeSlideState);
+        }
     }
 
     public override void PhysicsUpdate()
