@@ -17,6 +17,7 @@ public class PlayerInAirState : PlayerState
     private bool oldIsTouchingWall;
     private bool oldIsTouchingWallBack;
     private bool isTouchingLedge;
+    private bool isTouchingSwing;
 
     private bool coyoteTime;
     private bool wallJumpCoyoteTime;
@@ -43,6 +44,12 @@ public class PlayerInAirState : PlayerState
         isTouchingWallBack = core.CollisionSenses.WallBack;
         isTouchingLedge = core.CollisionSenses.LedgeHorizontal;
         isTouchingCeiling = core.CollisionSenses.Ceiling;
+        isTouchingSwing = core.CollisionSenses.Swing;
+
+        if (isTouchingSwing)
+        {
+            player.SwingGrabState.SetDetectedPosition(player.transform.position);
+        }
 
         if (isTouchingWall && !isTouchingLedge)
         {
@@ -69,6 +76,7 @@ public class PlayerInAirState : PlayerState
         oldIsTouchingWallBack = false;
         isTouchingWall = false;
         isTouchingWallBack = false;
+        isTouchingSwing = false;
     }
 
     public override void LogicUpdate()
@@ -90,7 +98,12 @@ public class PlayerInAirState : PlayerState
         {            
             stateMachine.ChangeState(player.LandState);
         }
-        else if(isTouchingWall && !isTouchingLedge && !isGrounded)
+        else if(isTouchingSwing)
+        {
+            stateMachine.ChangeState(player.SwingGrabState);
+            Debug.Log("Daje");
+        }
+        else if (isTouchingWall && !isTouchingLedge && !isGrounded && !isTouchingSwing)
         {
             stateMachine.ChangeState(player.LedgeClimbState);
         }
@@ -119,11 +132,15 @@ public class PlayerInAirState : PlayerState
             {
                 core.Movement.SetVelocityY(-0.5f);
             }
-            core.Movement.CheckIfShouldFlip(xInput);
             core.Movement.SetVelocityX(playerData.airVelocity * xInput);
 
             player.Anim.SetFloat("yVelocity", core.Movement.CurrentVelocity.y);
             player.Anim.SetFloat("xVelocity", Mathf.Abs(core.Movement.CurrentVelocity.x));
+
+            if (!isExitingState)
+            {
+                core.Movement.CheckIfShouldFlip(xInput);
+            }
         }
     }
 

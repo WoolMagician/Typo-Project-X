@@ -6,6 +6,7 @@ public class PlayerGroundedState : PlayerState
     protected int yInput;
 
     protected bool isTouchingCeiling;
+    protected float slopeAngle;
 
     protected bool JumpInput;
     private bool grabInput;
@@ -22,6 +23,7 @@ public class PlayerGroundedState : PlayerState
     {
         base.DoChecks();
 
+        slopeAngle = core.Movement.GetSlopeAngle(core.CollisionSenses.groundNormal);
         isGrounded = core.CollisionSenses.IsGrounded();
         isTouchingWall = core.CollisionSenses.WallFront;
         isTouchingLedge = core.CollisionSenses.LedgeHorizontal;
@@ -43,7 +45,8 @@ public class PlayerGroundedState : PlayerState
     {
         base.LogicUpdate();
 
-        float slopeAngle = core.Movement.GetSlopeAngle(core.CollisionSenses.groundNormal);
+        //Update slope angle
+        player.Anim.SetFloat("slopeAngle", Mathf.Abs(slopeAngle));
 
         xInput = player.InputHandler.NormInputX;
         yInput = player.InputHandler.NormInputY;
@@ -64,7 +67,9 @@ public class PlayerGroundedState : PlayerState
         {
             stateMachine.ChangeState(player.WallGrabState);
         }
-        else if (xInput == 0 && slopeAngle >= 5f)
+        else if (xInput == Mathf.Sign(core.Movement.GetSlopeParallel().x) && 
+                 slopeAngle >= player.playerData.slopeMaxAngle && 
+                 Mathf.Abs(core.Movement.CurrentVelocity.magnitude) > 0.75f)
         {
             stateMachine.ChangeState(player.SlopeSlideState);
         }

@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerSlopeSlideState : PlayerGroundedState
 {
+    private float _originalRigidbodyDrag;
+    private bool isSlidingInFacingDirection;
+
     public PlayerSlopeSlideState(Player player, string animBoolName) : base(player, animBoolName)
     {
     }
@@ -9,6 +12,7 @@ public class PlayerSlopeSlideState : PlayerGroundedState
     public override void AnimationFinishTrigger()
     {
         base.AnimationFinishTrigger();
+        player.Anim.SetBool("slideSlopeEnd", false);
     }
 
     public override void AnimationTrigger()
@@ -16,42 +20,38 @@ public class PlayerSlopeSlideState : PlayerGroundedState
         base.AnimationTrigger();
     }
 
+    public override void DoChecks()
+    {
+        base.DoChecks();
+        isSlidingInFacingDirection = Mathf.Sign(core.Movement.GetSlopeParallel().x) == core.Movement.FacingDirection;
+    }
+
     public override void Enter()
     {
         base.Enter();
+        _originalRigidbodyDrag = player.RB.drag;
     }
 
     public override void Exit()
     {
         base.Exit();
-        player.Anim.SetBool("slopeSlideState", false);
-        player.Anim.SetBool("slideSlopeEnd", false);
-        player.RB.drag = 0f;
+        player.RB.drag = _originalRigidbodyDrag;
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
 
-        float slopeAngle = core.Movement.GetSlopeAngle(core.CollisionSenses.groundNormal);
-        player.Anim.SetFloat("slopeAngle", Mathf.Abs(slopeAngle));
-
         //Check where we need to force flip our sprite
-        if (Mathf.Sign(core.Movement.GetSlopeParallel(core.CollisionSenses.groundNormal).x) != core.Movement.FacingDirection)
+        if (!isSlidingInFacingDirection)
         {
             core.Movement.Flip();
         }
-
-        //Slope slide with dampening
-        if (xInput == 0 && !JumpInput)
+        else
         {
-            if (slopeAngle > 5f)
+            if (slopeAngle < player.playerData.slopeMaxAngle)
             {
-
-            }
-            else
-            {
-                if(!isExitingState)
+                if (!isExitingState)
                 {
                     if (isAnimationFinished)
                     {
@@ -59,15 +59,11 @@ public class PlayerSlopeSlideState : PlayerGroundedState
                     }
                     else
                     {
-                        player.RB.drag = 10f;
+                        player.RB.drag = player.playerData.slopeSlideEndDrag;
                         player.Anim.SetBool("slideSlopeEnd", true);
                     }
                 }
             }
-        }
-        else
-        {
-            player.StateMachine.ChangeState(player.MoveState);
         }
     }
 }

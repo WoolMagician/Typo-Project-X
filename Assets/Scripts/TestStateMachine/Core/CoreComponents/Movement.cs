@@ -111,7 +111,6 @@ public class Movement : CoreComponent
         Vector3 groundParallel = Vector3.Cross(RB.transform.up, groundNormal);
         Vector3 slopeParallel = Vector3.Cross(groundParallel, groundNormal);
 
-        if (slopeAngle > 55f) return motionVector + slopeParallel.normalized / 3f;
         if (adjustedVelocity.y < 0) { return adjustedVelocity; }
 
         return motionVector;
@@ -126,6 +125,11 @@ public class Movement : CoreComponent
     public Quaternion GetSlopeRotation(Vector3 groundNormal)
     {
         return Quaternion.FromToRotation(RB.transform.up, groundNormal);
+    }
+
+    public Vector3 GetSlopeParallel()
+    {
+        return this.GetSlopeParallel(core.CollisionSenses.groundNormal);
     }
 
     public Vector3 GetSlopeParallel(Vector3 groundNormal)

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMoveState : PlayerGroundedState
 {
@@ -16,7 +14,6 @@ public class PlayerMoveState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
-        player.RB.drag = 0f;
     }
 
     public override void Exit()
@@ -31,14 +28,22 @@ public class PlayerMoveState : PlayerGroundedState
         //Check if we should flip character based on input
         core.Movement.CheckIfShouldFlip(xInput);
 
-        ////Adjust movement vector to ground slope
-        //Vector3 movementVector = core.Movement.AdjustMotionVectorToGroundSlope(core.CollisionSenses.groundNormal, new Vector3(xInput, 0, 0));
-
-        //Set motion vector
-        core.Movement.SetVelocityX(playerData.movementVelocity * xInput);
-
         //If we are not already transitioning to something else and we are standing still go to idle state.
-        if (!isExitingState && xInput == 0) stateMachine.ChangeState(player.IdleState);     
+        if (!isExitingState)
+        {
+            if (xInput == 0)
+            {
+                stateMachine.ChangeState(player.IdleState);        
+            }
+            else
+            {
+                //Adjust movement vector to ground slope
+                Vector3 movementVector = core.Movement.AdjustMotionVectorToGroundSlope(core.CollisionSenses.groundNormal, new Vector3(xInput, 0, 0));
+
+                //Set motion vector
+                core.Movement.SetVelocity(playerData.movementVelocity, movementVector, 1);
+            }
+        }
     }
 
     public override void PhysicsUpdate()

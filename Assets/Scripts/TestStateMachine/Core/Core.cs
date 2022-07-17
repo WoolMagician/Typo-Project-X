@@ -15,21 +15,13 @@ public class Core : MonoBehaviour
         private set => collisionSenses = value;
     }
 
-    public CharacterController CharacterController
-    {
-        get => characterController;
-        private set => characterController = value;
-    }
-
     private Movement movement;
     private CollisionSenses collisionSenses;
-    private CharacterController characterController;
 
     private void Awake()
     {
         Movement = GetComponentInChildren<Movement>();
         CollisionSenses = GetComponentInChildren<CollisionSenses>();
-        characterController = GetComponentInParent<CharacterController>();
     }
 
     public void LogicUpdate()

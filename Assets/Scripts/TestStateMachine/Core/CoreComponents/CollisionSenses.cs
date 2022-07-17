@@ -40,6 +40,7 @@ public class CollisionSenses : CoreComponent
     public float GroundCheckRadius { get => groundCheckRadius; set => groundCheckRadius = value; }
     public float WallCheckDistance { get => wallCheckDistance; set => wallCheckDistance = value; }
     public LayerMask WhatIsGround { get => whatIsGround; set => whatIsGround = value; }
+    public LayerMask WhatIsSwing { get => whatIsSwing; set => whatIsSwing = value; }
 
 
     [SerializeField] private Transform groundCheck;
@@ -55,6 +56,7 @@ public class CollisionSenses : CoreComponent
     [Header("Ground check settings")]
     private const float checkRaycastGroundedOffset = 0.75f;
     [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private LayerMask whatIsSwing;
     [SerializeField] private float maxGroundedRadius = 0.1925f; //0.13
     [SerializeField] private Vector3 maxGroundedHeight; // 0, 0.95f, 0
     [SerializeField] private Vector3 maxGroundedDistanceDown = Vector3.down * 0.2f; // 0, -0.005, 0
@@ -74,12 +76,17 @@ public class CollisionSenses : CoreComponent
 
     public bool WallFront
     {
-        get => Physics.Raycast(WallCheck.position, Vector3.right * core.Movement.FacingDirection, wallCheckDistance, whatIsGround);
+        get => Physics.Raycast(WallCheck.position, Vector3.right * core.Movement.FacingDirection, out RaycastHit hit, wallCheckDistance, whatIsGround) && hit.collider.gameObject.tag != "SwingObject";
     }
 
     public bool LedgeHorizontal
     {
-        get => Physics.Raycast(LedgeCheckHorizontal.position, Vector3.right * core.Movement.FacingDirection, wallCheckDistance, whatIsGround);
+        get => Physics.Raycast(LedgeCheckHorizontal.position, Vector3.right * core.Movement.FacingDirection, out RaycastHit hit, wallCheckDistance, whatIsGround) && hit.collider.gameObject.tag != "SwingObject";
+    }
+
+    public bool Swing
+    {
+        get => Physics.Raycast(LedgeCheckHorizontal.position, Vector3.right * core.Movement.FacingDirection, out RaycastHit hit, wallCheckDistance, whatIsSwing) && hit.collider.gameObject.tag == "SwingObject";
     }
 
     public bool LedgeVertical
@@ -96,7 +103,7 @@ public class CollisionSenses : CoreComponent
     {
         bool result = this.IsGrounded(out RaycastHit hit);
         groundNormal = result ? hit.normal : Vector3.up;
-        return this.core.CharacterController.isGrounded || result;
+        return result;
     }
 
     private bool IsGrounded(out RaycastHit hit)

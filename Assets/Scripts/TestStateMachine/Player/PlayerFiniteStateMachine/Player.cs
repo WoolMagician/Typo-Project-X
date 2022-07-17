@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public PlayerWallClimbState WallClimbState { get; private set; }
     public PlayerWallJumpState WallJumpState { get; private set; }
     public PlayerLedgeClimbState LedgeClimbState { get; private set; }
+    public PlayerSwingGrabState SwingGrabState { get; private set; }
 
     public PlayerData playerData;
     public IntEventChannelSO AnimateCameraChannel;
@@ -32,7 +33,6 @@ public class Player : MonoBehaviour
 
     public Rigidbody RB { get; private set; }
 
-    //public CharacterController CharacterController { get; private set; }
     public CapsuleCollider MovementCollider { get; private set; }
 
     #endregion
@@ -60,13 +60,13 @@ public class Player : MonoBehaviour
         WallClimbState = new PlayerWallClimbState(this, "wallClimb");
         WallJumpState = new PlayerWallJumpState(this, "inAir");
         LedgeClimbState = new PlayerLedgeClimbState(this, "ledgeClimbState");
+        SwingGrabState = new PlayerSwingGrabState(this, "swingGrabState");
     }
 
     private void Start()
     {
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody>();
-        //CharacterController = GetComponent<CharacterController>();
         MovementCollider = GetComponent<CapsuleCollider>();
         StateMachine.Initialize(IdleState);
     }
@@ -98,5 +98,9 @@ public class Player : MonoBehaviour
 
     #endregion
 
+    public void OnDrawGizmos()
+    {
+        //Gizmos.DrawRay(this.transform.position, Core.Movement.CurrentVelocity);
+    }
 
 }

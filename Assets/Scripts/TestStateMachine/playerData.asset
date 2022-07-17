@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: -2
   movementVelocity: 0.75
-  airVelocity: 0.75
+  airVelocity: 0.85
+  slopeMaxAngle: 25
+  slopeSlideEndDrag: 10
   jumpVelocity: 3.5
   amountOfJumps: 1
   wallJumpVelocity: 4
@@ -26,14 +28,3 @@ MonoBehaviour:
   wallClimbVelocity: 0.75
   startOffset: {x: 0.1, y: 0.18}
   stopOffset: {x: 0.1, y: 0.18}
-  dashCooldown: 0.5
-  maxHoldTime: 1
-  holdTimeScale: 0.25
-  dashTime: 0.2
-  dashVelocity: 30
-  drag: 10
-  dashEndYMultiplier: 0.2
-  distBetweenAfterImages: 0.5
-  crouchMovementVelocity: 5
-  crouchColliderHeight: 0.8
-  standColliderHeight: 0.36

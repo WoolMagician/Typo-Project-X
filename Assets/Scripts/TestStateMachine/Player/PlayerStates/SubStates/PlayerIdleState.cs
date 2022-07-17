@@ -16,12 +16,15 @@ public class PlayerIdleState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
-        core.Movement.SetVelocityX(0f);        
+        player.RB.useGravity = false;
+        core.Movement.SetVelocityX(0f);
+        core.Movement.SetVelocityY(0f);
     }
 
     public override void Exit()
     {
         base.Exit();
+        player.RB.useGravity = true;
     }
 
     public override void LogicUpdate()
