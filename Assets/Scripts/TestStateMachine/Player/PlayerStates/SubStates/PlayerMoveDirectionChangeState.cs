@@ -28,6 +28,7 @@ public class PlayerMoveDirectionChangeState : PlayerGroundedState
     public override void Exit()
     {
         base.Exit();
+        player.Anim.SetBool("moveDirectionChange", false);
     }
 
     public override void LogicUpdate()

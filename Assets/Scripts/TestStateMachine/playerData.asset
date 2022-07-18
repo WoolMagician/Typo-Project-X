@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: -2
   movementVelocity: 1
-  animalDashVelocityMultiplier: 2
+  animalDashVelocityMultiplier: 2.5
   acceleration: 2
   friction: 30
   airVelocity: 0.85

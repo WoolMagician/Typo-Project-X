@@ -54,7 +54,7 @@ public class PlayerMoveState : PlayerGroundedState
                 //Player snapped input to opposite direction, play change direction
                 if (this.mLastFrameXInput != 0 && 
                     Mathf.Sign(this.mLastFrameXInput) != xInput && 
-                    Mathf.Abs(player.InputHandler.RawMovementInput.x) > 0.5f)
+                    Mathf.Abs(player.InputHandler.RawMovementInput.x) >= 0.5f)
                 {
                     stateMachine.ChangeState(player.MoveDirectionChangeState);
                 }
