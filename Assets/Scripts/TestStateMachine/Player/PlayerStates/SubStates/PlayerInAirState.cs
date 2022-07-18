@@ -101,7 +101,6 @@ public class PlayerInAirState : PlayerState
         else if(isTouchingSwing)
         {
             stateMachine.ChangeState(player.SwingGrabState);
-            Debug.Log("Daje");
         }
         else if (isTouchingWall && !isTouchingLedge && !isGrounded && !isTouchingSwing)
         {

@@ -2,6 +2,9 @@
 
 public class PlayerMoveState : PlayerGroundedState
 {
+    private int mLastFrameXInput;
+    private float interpolatedMovementVelocity;
+
     public PlayerMoveState(Player player, string animBoolName) : base(player, animBoolName)
     {
     }
@@ -14,6 +17,8 @@ public class PlayerMoveState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
+        this.mLastFrameXInput = core.Movement.FacingDirection;
+        this.interpolatedMovementVelocity = Mathf.Abs(core.Movement.CurrentVelocity.x);
     }
 
     public override void Exit()
@@ -33,21 +38,44 @@ public class PlayerMoveState : PlayerGroundedState
         {
             if (xInput == 0)
             {
-                stateMachine.ChangeState(player.IdleState);        
+                //Interpolate velocity to simulate friction
+                interpolatedMovementVelocity = Mathf.Lerp(interpolatedMovementVelocity, 0, playerData.friction * Time.deltaTime) * core.Movement.FacingDirection;
+
+                //Set only X velocity
+                core.Movement.SetVelocityX(interpolatedMovementVelocity);
+
+                if (Mathf.Abs(core.Movement.CurrentVelocity.x) < 0.01)
+                {
+                    stateMachine.ChangeState(player.IdleState);
+                }
             }
             else
             {
-                //Adjust movement vector to ground slope
-                Vector3 movementVector = core.Movement.AdjustMotionVectorToGroundSlope(core.CollisionSenses.groundNormal, new Vector3(xInput, 0, 0));
+                //Player snapped input to opposite direction, play change direction
+                if (this.mLastFrameXInput != 0 && 
+                    Mathf.Sign(this.mLastFrameXInput) != xInput && 
+                    Mathf.Abs(player.InputHandler.RawMovementInput.x) > 0.5f)
+                {
+                    stateMachine.ChangeState(player.MoveDirectionChangeState);
+                }
+                else
+                {
+                    //Store last input to execute direction change
+                    this.mLastFrameXInput = xInput;
 
-                //Set motion vector
-                core.Movement.SetVelocity(playerData.movementVelocity, movementVector, 1);
+                    //Adjust movement vector to ground slope
+                    Vector3 movementVector = core.Movement.AdjustMotionVectorToGroundSlope(core.CollisionSenses.groundNormal, 
+                                                                                           new Vector3(xInput, core.Movement.CurrentVelocity.y, 0));
+
+                    //Interpolate velocity to simulate acceleration
+                    interpolatedMovementVelocity = Mathf.Lerp(interpolatedMovementVelocity,
+                                                              playerData.movementVelocity * (player.InputHandler.DashInput ? playerData.animalDashVelocityMultiplier : 1f), 
+                                                              playerData.acceleration * Time.deltaTime);
+
+                    //Set motion vector
+                    core.Movement.SetVelocity(interpolatedMovementVelocity, movementVector, 1);
+                }
             }
         }
-    }
-
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();
     }
 }

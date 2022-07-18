@@ -47,6 +47,7 @@ public class PlayerGroundedState : PlayerState
 
         //Update slope angle
         player.Anim.SetFloat("slopeAngle", Mathf.Abs(slopeAngle));
+        player.Anim.SetFloat("xVelocity", Mathf.Abs(core.Movement.CurrentVelocity.x));
 
         xInput = player.InputHandler.NormInputX;
         yInput = player.InputHandler.NormInputY;

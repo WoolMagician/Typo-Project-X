@@ -3818,11 +3818,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 46
-        y: 9396
-        width: 50
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 9397
+        width: 31
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50961536}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3840,10 +3840,10 @@ TextureImporter:
         serializedVersion: 2
         x: 176
         y: 9396
-        width: 50
+        width: 31
         height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5188679}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3860,11 +3860,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 306
-        y: 9396
-        width: 50
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 9397
+        width: 31
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50961536}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3881,11 +3881,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 9266
-        width: 50
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 9277
+        width: 37
+        height: 42
+      alignment: 9
+      pivot: {x: 0.4189189, y: 0.63095236}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3901,12 +3901,12 @@ TextureImporter:
       name: tomba_sheet_128
       rect:
         serializedVersion: 2
-        x: 168
-        y: 9266
-        width: 50
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 169
+        y: 9269
+        width: 36
+        height: 50
+      alignment: 9
+      pivot: {x: 0.43055555, y: 0.53}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3922,12 +3922,12 @@ TextureImporter:
       name: tomba_sheet_129
       rect:
         serializedVersion: 2
-        x: 298
-        y: 9266
-        width: 50
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 299
+        y: 9268
+        width: 30
+        height: 51
+      alignment: 9
+      pivot: {x: 0.51666665, y: 0.51960784}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3943,12 +3943,12 @@ TextureImporter:
       name: tomba_sheet_130
       rect:
         serializedVersion: 2
-        x: 428
-        y: 9266
-        width: 50
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 429
+        y: 9269
+        width: 38
+        height: 50
+      alignment: 9
+      pivot: {x: 0.40789473, y: 0.53}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3964,12 +3964,12 @@ TextureImporter:
       name: tomba_sheet_131
       rect:
         serializedVersion: 2
-        x: 558
-        y: 9266
-        width: 50
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 559
+        y: 9277
+        width: 40
+        height: 42
+      alignment: 9
+      pivot: {x: 0.3875, y: 0.63095236}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

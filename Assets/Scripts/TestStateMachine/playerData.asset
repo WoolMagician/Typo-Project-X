@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: playerData
   m_EditorClassIdentifier: 
   gravity: -2
-  movementVelocity: 0.75
+  movementVelocity: 1
+  animalDashVelocityMultiplier: 2
+  acceleration: 2
+  friction: 30
   airVelocity: 0.85
   slopeMaxAngle: 25
   slopeSlideEndDrag: 10

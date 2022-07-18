@@ -39,7 +39,14 @@ public class PlayerAbilityState : PlayerState
         {
             if (isGrounded && core.Movement.CurrentVelocity.y < 0.01f)
             {
-                stateMachine.ChangeState(player.IdleState);
+                if(player.InputHandler.NormInputX != 0)
+                {
+                    stateMachine.ChangeState(player.MoveState);
+                }
+                else
+                {
+                    stateMachine.ChangeState(player.IdleState);
+                }
             }
             else
             {

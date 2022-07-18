@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public PlayerIdleState IdleState { get; private set; }
     public PlayerSlopeSlideState SlopeSlideState { get; private set; }
     public PlayerMoveState MoveState { get; private set; }
+    public PlayerMoveDirectionChangeState MoveDirectionChangeState { get; private set; }
     public PlayerJumpState JumpState { get; private set; }
     public PlayerInAirState InAirState { get; private set; }
     public PlayerLandState LandState { get; private set; }
@@ -52,9 +53,10 @@ public class Player : MonoBehaviour
         IdleState = new PlayerIdleState(this,"idle");
         SlopeSlideState = new PlayerSlopeSlideState(this, "slopeSlideState");
         MoveState = new PlayerMoveState(this, "move");
+        MoveDirectionChangeState = new PlayerMoveDirectionChangeState(this, "move");
         JumpState = new PlayerJumpState(this,"inAir");
         InAirState = new PlayerInAirState(this, "inAir");
-        LandState = new PlayerLandState(this, "land");
+        LandState = new PlayerLandState(this, "");
         WallSlideState = new PlayerWallSlideState(this,"wallSlide");
         WallGrabState = new PlayerWallGrabState(this, "wallGrab");
         WallClimbState = new PlayerWallClimbState(this, "wallClimb");

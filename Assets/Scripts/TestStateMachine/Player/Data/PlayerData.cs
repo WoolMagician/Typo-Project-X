@@ -8,6 +8,9 @@ public class PlayerData : ScriptableObject
 
     [Header("Move State")]
     public float movementVelocity = 10f;
+    public float animalDashVelocityMultiplier = 1.5f;
+    public float acceleration = 2f;
+    public float friction = 30f;
     public float airVelocity = 3f;
     public float slopeMaxAngle = 25f;
     public float slopeSlideEndDrag = 10f;
