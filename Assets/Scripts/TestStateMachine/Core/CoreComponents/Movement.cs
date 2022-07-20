@@ -105,16 +105,18 @@ public class Movement : CoreComponent
 
     public Vector3 AdjustMotionVectorToGroundSlope(Vector3 groundNormal, Vector3 motionVector)
     {
-        float slopeAngle = this.GetSlopeAngle(groundNormal);
         Quaternion slopeRotation = this.GetSlopeRotation(groundNormal);
         Vector3 adjustedVelocity = slopeRotation * motionVector;
-        Vector3 groundParallel = Vector3.Cross(RB.transform.up, groundNormal);
-        Vector3 slopeParallel = Vector3.Cross(groundParallel, groundNormal);
 
         if (adjustedVelocity.y < 0) { return adjustedVelocity; }
 
         return motionVector;
 
+    }
+
+    public float GetSlopeAngle()
+    {
+        return Mathf.Round(Vector3.Angle(core.CollisionSenses.groundNormal, RB.transform.up));
     }
 
     public float GetSlopeAngle(Vector3 normal)

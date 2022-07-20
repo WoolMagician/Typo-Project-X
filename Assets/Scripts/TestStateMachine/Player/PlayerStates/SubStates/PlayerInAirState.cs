@@ -94,7 +94,7 @@ public class PlayerInAirState : PlayerState
 
         CheckJumpMultiplier();
 
-        if (isGrounded)
+        if (isGrounded && core.Movement.CurrentVelocity.y < 0.01f)
         {            
             stateMachine.ChangeState(player.LandState);
         }
@@ -133,11 +133,10 @@ public class PlayerInAirState : PlayerState
             }
             core.Movement.SetVelocityX(playerData.airVelocity * xInput);
 
-            player.Anim.SetFloat("yVelocity", core.Movement.CurrentVelocity.y);
-            player.Anim.SetFloat("xVelocity", Mathf.Abs(core.Movement.CurrentVelocity.x));
-
             if (!isExitingState)
             {
+                player.Anim.SetFloat("yVelocity", core.Movement.CurrentVelocity.y);
+                player.Anim.SetFloat("xVelocity", Mathf.Abs(core.Movement.CurrentVelocity.x));
                 core.Movement.CheckIfShouldFlip(xInput);
             }
         }

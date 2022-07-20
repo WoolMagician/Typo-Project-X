@@ -101,9 +101,15 @@ public class CollisionSenses : CoreComponent
 
     public bool IsGrounded()
     {
-        bool result = this.IsGrounded(out RaycastHit hit);
-        groundNormal = result ? hit.normal : Vector3.up;
-        return result;
+        //bool isGroundedBySphereOverlap = Physics.OverlapSphere(GroundCheck.position, groundCheckRadius, whatIsGround).Length > 0;
+
+        //if (isGroundedBySphereOverlap)
+        //{
+            bool result = this.IsGrounded(out RaycastHit hit);
+            groundNormal = result ? hit.normal : Vector3.up;
+            return result;
+        //}
+        //return false;
     }
 
     private bool IsGrounded(out RaycastHit hit)
@@ -113,7 +119,7 @@ public class CollisionSenses : CoreComponent
         Vector3 offsetPosition = playerTransform.position + offset;
         Ray downcastFromOffsetPositionRay = new Ray(offsetPosition, Vector3.down);
 
-        if (Physics.Raycast(downcastFromOffsetPositionRay, out hit, 100f, whatIsGround))
+        if (Physics.Raycast(downcastFromOffsetPositionRay, out hit, 0.55f, whatIsGround))
         {
             //If distance is less than threshold we are grounded
             thresholdDistanceGrounded = hit.distance < maxGroundedDistanceDown.y;
@@ -149,6 +155,12 @@ public class CollisionSenses : CoreComponent
 
     private void OnDrawGizmos()
     {
+        Color oldGizmoColor = Gizmos.color;
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(GroundCheck.position, groundCheckRadius);
+        Gizmos.DrawWireSphere(CeilingCheck.position, groundCheckRadius);
+        Gizmos.color = oldGizmoColor;
+
         Vector3 pos = playerTransform.position;
         float fullRadius = maxGroundedRadius;
         float halfRadius = (maxGroundedRadius / 2);

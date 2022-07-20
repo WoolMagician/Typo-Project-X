@@ -3,6 +3,7 @@
 public class PlayerMoveState : PlayerGroundedState
 {
     private int mLastFrameXInput;
+    private float mLastFrameVelocity;
     private float interpolatedMovementVelocity;
 
     public PlayerMoveState(Player player, string animBoolName) : base(player, animBoolName)
@@ -18,6 +19,7 @@ public class PlayerMoveState : PlayerGroundedState
     {
         base.Enter();
         this.mLastFrameXInput = core.Movement.FacingDirection;
+        this.mLastFrameVelocity = Mathf.Abs(core.Movement.CurrentVelocity.magnitude);
         this.interpolatedMovementVelocity = Mathf.Abs(core.Movement.CurrentVelocity.x);
     }
 
@@ -43,6 +45,7 @@ public class PlayerMoveState : PlayerGroundedState
 
                 //Set only X velocity
                 core.Movement.SetVelocityX(interpolatedMovementVelocity);
+                core.Movement.SetVelocityY(0);
 
                 if (Mathf.Abs(core.Movement.CurrentVelocity.x) < 0.01)
                 {
@@ -54,18 +57,23 @@ public class PlayerMoveState : PlayerGroundedState
                 //Player snapped input to opposite direction, play change direction
                 if (this.mLastFrameXInput != 0 && 
                     Mathf.Sign(this.mLastFrameXInput) != xInput && 
-                    Mathf.Abs(player.InputHandler.RawMovementInput.x) >= 0.5f)
+                    this.mLastFrameVelocity >= 0.85f)
                 {
                     stateMachine.ChangeState(player.MoveDirectionChangeState);
                 }
                 else
                 {
-                    //Store last input to execute direction change
-                    this.mLastFrameXInput = xInput;
+                    Vector3 movementVector = new Vector3(xInput, 0, 0);
 
-                    //Adjust movement vector to ground slope
-                    Vector3 movementVector = core.Movement.AdjustMotionVectorToGroundSlope(core.CollisionSenses.groundNormal, 
-                                                                                           new Vector3(xInput, core.Movement.CurrentVelocity.y, 0));
+                    if (core.Movement.GetSlopeAngle() > 0)
+                    {
+                        Vector3 slopeParallelFacingDown = core.Movement.GetSlopeParallel();
+                        if (Mathf.Sign(slopeParallelFacingDown.x) == core.Movement.FacingDirection)
+                        {                            
+                            //Adjust movement vector to ground slope
+                            movementVector = core.Movement.AdjustMotionVectorToGroundSlope(core.CollisionSenses.groundNormal, movementVector);
+                        }
+                    }
 
                     //Interpolate velocity to simulate acceleration
                     interpolatedMovementVelocity = Mathf.Lerp(interpolatedMovementVelocity,
@@ -74,6 +82,10 @@ public class PlayerMoveState : PlayerGroundedState
 
                     //Set motion vector
                     core.Movement.SetVelocity(interpolatedMovementVelocity, movementVector, 1);
+
+                    //Store last frame values
+                    this.mLastFrameXInput = xInput;
+                    this.mLastFrameVelocity = Mathf.Abs(core.Movement.CurrentVelocity.magnitude);
                 }
             }
         }
