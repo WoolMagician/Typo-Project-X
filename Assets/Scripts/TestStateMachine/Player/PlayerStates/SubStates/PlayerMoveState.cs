@@ -3,6 +3,7 @@
 public class PlayerMoveState : PlayerGroundedState
 {
     private int mLastFrameXInput;
+    private bool mHasPlayerSnappedInputToOppositeDirection;
     private float mLastFrameVelocity;
     private float interpolatedMovementVelocity;
 
@@ -13,6 +14,7 @@ public class PlayerMoveState : PlayerGroundedState
     public override void DoChecks()
     {
         base.DoChecks();
+
     }
 
     public override void Enter()
@@ -20,7 +22,8 @@ public class PlayerMoveState : PlayerGroundedState
         base.Enter();
         this.mLastFrameXInput = core.Movement.FacingDirection;
         this.mLastFrameVelocity = Mathf.Abs(core.Movement.CurrentVelocity.magnitude);
-        this.interpolatedMovementVelocity = Mathf.Abs(core.Movement.CurrentVelocity.x);
+        //this.interpolatedMovementVelocity = Mathf.Abs(core.Movement.CurrentVelocity.x);        
+        this.interpolatedMovementVelocity = 0f;
     }
 
     public override void Exit()
@@ -54,10 +57,13 @@ public class PlayerMoveState : PlayerGroundedState
             }
             else
             {
+                //Check if player snapped input
+                this.mHasPlayerSnappedInputToOppositeDirection = this.mLastFrameXInput != 0 &&
+                                                                 Mathf.Sign(this.mLastFrameXInput) != xInput &&
+                                                                 this.mLastFrameVelocity >= 0.85f;
+
                 //Player snapped input to opposite direction, play change direction
-                if (this.mLastFrameXInput != 0 && 
-                    Mathf.Sign(this.mLastFrameXInput) != xInput && 
-                    this.mLastFrameVelocity >= 0.85f)
+                if (this.mHasPlayerSnappedInputToOppositeDirection)
                 {
                     stateMachine.ChangeState(player.MoveDirectionChangeState);
                 }
@@ -65,15 +71,9 @@ public class PlayerMoveState : PlayerGroundedState
                 {
                     Vector3 movementVector = new Vector3(xInput, 0, 0);
 
-                    if (core.Movement.GetSlopeAngle() > 0)
-                    {
-                        Vector3 slopeParallelFacingDown = core.Movement.GetSlopeParallel();
-                        if (Mathf.Sign(slopeParallelFacingDown.x) == core.Movement.FacingDirection)
-                        {                            
-                            //Adjust movement vector to ground slope
-                            movementVector = core.Movement.AdjustMotionVectorToGroundSlope(core.CollisionSenses.groundNormal, movementVector);
-                        }
-                    }
+                    //Return fixed movement vector based on ground slope
+                    //This will adjust vector only if slope is greater than 0.
+                    movementVector = AdjustMovementVectorToGroundSlope(movementVector);
 
                     //Interpolate velocity to simulate acceleration
                     interpolatedMovementVelocity = Mathf.Lerp(interpolatedMovementVelocity,
@@ -87,7 +87,26 @@ public class PlayerMoveState : PlayerGroundedState
                     this.mLastFrameXInput = xInput;
                     this.mLastFrameVelocity = Mathf.Abs(core.Movement.CurrentVelocity.magnitude);
                 }
+
+                //Using Rigidbody actual X velocity would cause flickering
+                //in blend tree, use actual interpolated speed based on input.
+                player.Anim.SetFloat("xVelocity", Mathf.Abs(interpolatedMovementVelocity));
             }
         }
+    }
+
+    private Vector3 AdjustMovementVectorToGroundSlope(Vector3 movementVector)
+    {
+        //Adjust to slope only if it's greater than 0
+        if (core.Movement.GetSlopeAngle() > 0)
+        {
+            Vector3 slopeParallelFacingDown = core.Movement.GetSlopeParallel();
+            if (Mathf.Sign(slopeParallelFacingDown.x) == core.Movement.FacingDirection)
+            {
+                //Adjust movement vector to ground slope
+                return core.Movement.RotateVectorToSlope(core.CollisionSenses.groundNormal, movementVector);
+            }
+        }
+        return movementVector;
     }
 }

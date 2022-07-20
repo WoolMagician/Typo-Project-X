@@ -23,7 +23,7 @@ public class PlayerSlopeSlideState : PlayerGroundedState
     public override void DoChecks()
     {
         base.DoChecks();
-        isSlidingInFacingDirection = Mathf.Sign(core.Movement.GetSlopeParallel().x) == core.Movement.FacingDirection;
+        isSlidingInFacingDirection = core.Movement.GetSlopeAngle() > 0 ? Mathf.Sign(core.Movement.GetSlopeParallel().x) == core.Movement.FacingDirection : true;
     }
 
     public override void Enter()
@@ -63,6 +63,10 @@ public class PlayerSlopeSlideState : PlayerGroundedState
                         player.Anim.SetBool("slideSlopeEnd", true);
                     }
                 }
+            }
+            else
+            {
+                player.RB.drag = _originalRigidbodyDrag;
             }
         }
     }

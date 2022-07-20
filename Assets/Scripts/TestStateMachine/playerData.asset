@@ -15,8 +15,8 @@ MonoBehaviour:
   gravity: -2
   movementVelocity: 1
   animalDashVelocityMultiplier: 2.5
-  acceleration: 2
-  friction: 30
+  acceleration: 50
+  friction: 40
   airVelocity: 0.85
   slopeMaxAngle: 25
   slopeSlideEndDrag: 10

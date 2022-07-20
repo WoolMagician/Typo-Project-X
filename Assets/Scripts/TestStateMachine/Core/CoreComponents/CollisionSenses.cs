@@ -45,7 +45,6 @@ public class CollisionSenses : CoreComponent
 
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform wallCheck;
-    [SerializeField] private Transform wallCheck2;
     [SerializeField] private Transform ledgeCheckHorizontal;
     [SerializeField] private Transform ledgeCheckVertical;
     [SerializeField] private Transform ceilingCheck;
@@ -101,13 +100,13 @@ public class CollisionSenses : CoreComponent
 
     public bool IsGrounded()
     {
-        //bool isGroundedBySphereOverlap = Physics.OverlapSphere(GroundCheck.position, groundCheckRadius, whatIsGround).Length > 0;
+        bool isGroundedBySphereOverlap = Physics.OverlapSphere(GroundCheck.position, groundCheckRadius, whatIsGround).Length > 0;
 
         //if (isGroundedBySphereOverlap)
         //{
             bool result = this.IsGrounded(out RaycastHit hit);
             groundNormal = result ? hit.normal : Vector3.up;
-            return result;
+            return result || isGroundedBySphereOverlap;
         //}
         //return false;
     }

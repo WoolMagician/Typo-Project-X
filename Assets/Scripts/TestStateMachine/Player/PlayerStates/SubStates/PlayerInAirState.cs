@@ -25,9 +25,6 @@ public class PlayerInAirState : PlayerState
 
     private float startWallJumpCoyoteTime;
 
-    float maxVelocity = 5f;
-    float minVelocity = -5f;
-
     public PlayerInAirState(Player player, string animBoolName) : base(player, animBoolName)
     {
     }
@@ -94,8 +91,12 @@ public class PlayerInAirState : PlayerState
 
         CheckJumpMultiplier();
 
-        if (isGrounded && core.Movement.CurrentVelocity.y < 0.01f)
+        if (isGrounded && !isJumping)
         {            
+            stateMachine.ChangeState(player.LandState);
+        }
+        else if(isGrounded && isJumping && core.Movement.CurrentVelocity.y < 0.01f)
+        {
             stateMachine.ChangeState(player.LandState);
         }
         else if(isTouchingSwing)
@@ -187,35 +188,6 @@ public class PlayerInAirState : PlayerState
     {
         wallJumpCoyoteTime = true;
         startWallJumpCoyoteTime = Time.time;
-    }
-
-    void HorizontalSpeedClamp()
-    {
-        Vector3 motion = Vector3.ClampMagnitude(player.InputHandler.RawMovementInput, 2f);
-        motion *= (Mathf.Abs(player.InputHandler.RawMovementInput.x) == 1) ? 0.7f : 1;
-        core.Movement.SetVelocityX(core.Movement.CurrentVelocity.y * motion.x);
-
-        ////limit the amount of velocity we can achieve
-        //float velocityX = 0;
-
-        //if (core.CharacterController.velocity.x > maxVelocity)
-        //{
-        //    velocityX = core.CharacterController.velocity.x - maxVelocity;
-        //    if (velocityX < 0)
-        //    {
-        //        velocityX = 0;
-        //    }
-        //    //rb.AddForce(new Vector3(-velocityX, 0, 0), ForceMode.Acceleration);
-        //}
-        //if (core.CharacterController.velocity.x < minVelocity)
-        //{
-        //    velocityX = core.CharacterController.velocity.x - minVelocity;
-        //    if (velocityX > 0)
-        //    {
-        //        velocityX = 0;
-        //    }
-        //    //rb.AddForce(new Vector3(-velocityX, 0, 0), ForceMode.Acceleration);
-        //}       
     }
 
     public void StopWallJumpCoyoteTime() => wallJumpCoyoteTime = false;

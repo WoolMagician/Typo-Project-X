@@ -103,7 +103,7 @@ public class Movement : CoreComponent
         }
     }
 
-    public Vector3 AdjustMotionVectorToGroundSlope(Vector3 groundNormal, Vector3 motionVector)
+    public Vector3 RotateVectorToSlope(Vector3 groundNormal, Vector3 motionVector)
     {
         Quaternion slopeRotation = this.GetSlopeRotation(groundNormal);
         Vector3 adjustedVelocity = slopeRotation * motionVector;
