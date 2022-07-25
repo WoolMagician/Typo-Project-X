@@ -82,6 +82,7 @@ MonoBehaviour:
   _playerCollisionLayer:
     serializedVersion: 2
     m_Bits: 16384
+  _itemLootChannelSO: {fileID: 0}
 --- !u!212 &6604078681896167442
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -122,7 +123,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 0cbdcc7973e34354eb5340e069e08e06, type: 3}
+  m_Sprite: {fileID: 2159330636136061232, guid: e70c3dc25f0d0fb47a88485af1ecdee8,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
