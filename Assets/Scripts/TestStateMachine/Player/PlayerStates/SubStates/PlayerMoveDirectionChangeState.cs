@@ -23,6 +23,7 @@ public class PlayerMoveDirectionChangeState : PlayerGroundedState
     {
         base.Enter();
         player.Anim.SetBool("moveDirectionChange", true);
+        core.Movement.SetVelocityX(0);
     }
 
     public override void Exit()
@@ -34,6 +35,7 @@ public class PlayerMoveDirectionChangeState : PlayerGroundedState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        core.Movement.SetVelocityX(0);
 
         if (xInput == 0)
         {

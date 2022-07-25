@@ -11,6 +11,7 @@ public class PlayerInAirState : PlayerState
 
     //Checks
     private bool isGrounded;
+    private bool isGroundedOnGrabbable;
     private bool isTouchingWall;
     private bool isTouchingWallBack;
     private bool isTouchingCeiling;
@@ -37,6 +38,8 @@ public class PlayerInAirState : PlayerState
         oldIsTouchingWallBack = isTouchingWallBack;
 
         isGrounded = core.CollisionSenses.IsGrounded();
+        isGroundedOnGrabbable = core.CollisionSenses.IsGroundedOnGrabbable() && 
+                                core.CollisionSenses.CanLandOnGrabbableObject();
         isTouchingWall = core.CollisionSenses.WallFront;
         isTouchingWallBack = core.CollisionSenses.WallBack;
         isTouchingLedge = core.CollisionSenses.LedgeHorizontal;
@@ -91,13 +94,23 @@ public class PlayerInAirState : PlayerState
 
         CheckJumpMultiplier();
 
-        if (isGrounded && !isJumping)
+        if (isGrounded && !isJumping && !isGroundedOnGrabbable)
         {            
             stateMachine.ChangeState(player.LandState);
         }
-        else if(isGrounded && isJumping && core.Movement.CurrentVelocity.y < 0.01f)
+        else if(isGrounded && isJumping && core.Movement.CurrentVelocity.y < 0.01f && !isGroundedOnGrabbable)
         {
             stateMachine.ChangeState(player.LandState);
+        }
+        else if(isGroundedOnGrabbable && !isJumping)
+        {            
+            player.LandOnGrabbableState.SetGrabbedObject(core.CollisionSenses.groundCollider.GetComponent<IGrabbable>());
+            stateMachine.ChangeState(player.LandOnGrabbableState);
+        }
+        else if (isGroundedOnGrabbable && isJumping && core.Movement.CurrentVelocity.y < 0.01f)
+        {
+            player.LandOnGrabbableState.SetGrabbedObject(core.CollisionSenses.groundCollider.GetComponent<IGrabbable>());
+            stateMachine.ChangeState(player.LandOnGrabbableState);
         }
         else if(isTouchingSwing)
         {

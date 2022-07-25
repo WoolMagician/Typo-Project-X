@@ -26,7 +26,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Item
   - Post Processing
   - Event GUI
   - Climbable
@@ -41,7 +41,7 @@ TagManager:
   - DoNotCastShadows
   - IgnoreIsometricCulling
   - PerformIsometricCulling
-  - 
+  - GroundGrabbable
   - 
   - 
   - 

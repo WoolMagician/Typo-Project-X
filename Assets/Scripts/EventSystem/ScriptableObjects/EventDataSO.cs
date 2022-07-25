@@ -14,6 +14,8 @@ public class EventDataSO : SerializableScriptableObject
     [SerializeField] private int _clearAPGain = 0;
 
     public int ID { get => _id; }
+    public bool Occurred { get => _occurred; }
+    public bool Cleared { get => _cleared; }
 
     public LocalizedString Name { get => _name; }
     public LocalizedString Description { get => _description; }

@@ -23,7 +23,7 @@ public class PlayerGroundedState : PlayerState
         base.DoChecks();
 
         slopeAngle = core.Movement.GetSlopeAngle(core.CollisionSenses.groundNormal);
-        isGrounded = core.CollisionSenses.IsGrounded();
+        isGrounded = core.CollisionSenses.IsGrounded() || core.CollisionSenses.IsGroundedOnGrabbable();
         isTouchingWall = core.CollisionSenses.WallFront;
         isTouchingLedge = core.CollisionSenses.LedgeHorizontal;
     }

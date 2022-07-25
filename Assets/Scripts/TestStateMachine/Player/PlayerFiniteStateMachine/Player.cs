@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public PlayerJumpState JumpState { get; private set; }
     public PlayerInAirState InAirState { get; private set; }
     public PlayerLandState LandState { get; private set; }
+    public PlayerLandOnGrabbableState LandOnGrabbableState { get; private set; }
     public PlayerWallSlideState WallSlideState { get; private set; }
     public PlayerWallGrabState WallGrabState { get; private set; }
     public PlayerWallClimbState WallClimbState { get; private set; }
@@ -56,7 +57,8 @@ public class Player : MonoBehaviour
         MoveDirectionChangeState = new PlayerMoveDirectionChangeState(this, "move");
         JumpState = new PlayerJumpState(this,"inAir");
         InAirState = new PlayerInAirState(this, "inAir");
-        LandState = new PlayerLandState(this, "");
+        LandState = new PlayerLandState(this, "land");
+        LandOnGrabbableState = new PlayerLandOnGrabbableState(this, "land");
         WallSlideState = new PlayerWallSlideState(this,"wallSlide");
         WallGrabState = new PlayerWallGrabState(this, "wallGrab");
         WallClimbState = new PlayerWallClimbState(this, "wallClimb");
