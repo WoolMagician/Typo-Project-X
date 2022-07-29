@@ -15,4 +15,4 @@ MonoBehaviour:
   _guid: 88d720e0d62e06643896ce3a6031ddb9
   _isOpened: 0
   _chestTypeSO: {fileID: 11400000, guid: 74e3fabcccc9e1d4e928da7de0de8096, type: 2}
-  _containedItemSO: {fileID: 11400000, guid: 3be8b3af617e1c14a8b4609633321ba9, type: 2}
+  _containedItemSO: {fileID: 11400000, guid: 1c01f882b8257634cb70edfbbc4639f2, type: 2}

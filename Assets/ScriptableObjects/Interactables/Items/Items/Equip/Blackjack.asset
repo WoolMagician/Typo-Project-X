@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f8325b1b21fdcf479793a8d76aa895e, type: 3}
+  m_Script: {fileID: 11500000, guid: f2fd06a857360f1478d6a204d60c2033, type: 3}
   m_Name: Blackjack
   m_EditorClassIdentifier: 
-  _guid: 86fd323cb285be246af2c30070fb3968
+  _guid: 07a640e7a61138b48b329a7acdcd203a
   _name:
     m_TableReference:
       m_TableCollectionName: 
@@ -34,7 +34,12 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _healthResorationValue: 0
-  _itemType: {fileID: 11400000, guid: 991f045e044b20f4abad6c2b6fa69fa3, type: 2}
+  _itemType: {fileID: 11400000, guid: 5d2414762ba128d42898fb85d298549d, type: 2}
   _prefab: {fileID: 0}
+  _ropeSprite: {fileID: 4242166930048895826, guid: 1e6fb7e6b251d484eac00f6a08e42e8c,
+    type: 3}
+  _throwSpeed: 8
+  _headbackSpeed: 6
+  _rotateHeadOnThrow: 0
   references:
     version: 1

@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class AdjustSpriteRotationToGroundSlope : MonoBehaviour
 {
-    public Player player;
+    [SerializeField] private Player player;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         this.transform.rotation = Quaternion.Euler(Mathf.Abs(player.Core.Movement.GetSlopeAngle()) * 

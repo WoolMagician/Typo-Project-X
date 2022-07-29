@@ -38,8 +38,6 @@ public class ItemSO : SerializableScriptableObject
     public int HealthResorationValue => _healthResorationValue;
     public ItemTypeSO ItemType => _itemType;
     public GameObject Prefab => _prefab;
-    public virtual List<ItemStack> IngredientsList { get; }
-    public virtual ItemSO ResultingDish { get; }
 
     public virtual bool IsLocalized { get; }
     public virtual LocalizedSprite LocalizePreviewImage { get; }

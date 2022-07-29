@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251cc2ed576d9934ba12ebf7d586feb6, type: 3}
   m_Name: Inventory
   m_EditorClassIdentifier: 
-  _items:
-  - _item: {fileID: 11400000, guid: 8e3671346571c3c44bfa175a58566e1e, type: 2}
+  _items: []
+  _defaultItems:
+  - _item: {fileID: 11400000, guid: 86fd323cb285be246af2c30070fb3968, type: 2}
     Amount: 1
-  - _item: {fileID: 11400000, guid: 645e113304f74c64fb3be40a96d956dc, type: 2}
+  - _item: {fileID: 11400000, guid: 8a79df0ff746c5d4283cb6197fb7e1b4, type: 2}
     Amount: 1
-  - _item: {fileID: 11400000, guid: dbc3ec812559124409a4b1ec4bbc2f04, type: 2}
-    Amount: 1
-  _defaultItems: []
+  _weapon: {fileID: 11400000, guid: 86fd323cb285be246af2c30070fb3968, type: 2}
+  _pants: {fileID: 11400000, guid: 8a79df0ff746c5d4283cb6197fb7e1b4, type: 2}
+  _jewel: {fileID: 0}
+  _umbrella: {fileID: 0}
