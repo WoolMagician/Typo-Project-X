@@ -36,6 +36,7 @@ public class ItemInstance : MonoBehaviour
 
     private void Update()
     {
+        //If item is going downwards, restore collision with objects
         if (_rb.velocity.y < 0f)
         {
             while (_ignoredColliders.Count > 0)

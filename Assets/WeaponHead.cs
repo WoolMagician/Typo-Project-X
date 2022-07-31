@@ -42,12 +42,12 @@ public class WeaponHead : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        this.OnTriggerEnterCallback(other);
+        this.OnTriggerEnterCallback?.Invoke(other);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        this.OnTriggerExitCallback(other);
+        this.OnTriggerExitCallback?.Invoke(other);
     }
 
     private void OnCollisionEnter(Collision collision)

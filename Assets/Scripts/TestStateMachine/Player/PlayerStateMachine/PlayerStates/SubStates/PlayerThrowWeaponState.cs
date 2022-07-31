@@ -8,6 +8,7 @@ public class PlayerThrowWeaponState : PlayerAbilityState
     private bool attackInput;
     private bool attackInputStop;
     private bool thrown;
+    private Vector3 startPos;
 
     public const string WEAPON_THROW_STATE_ANIM_FLOAT_NAME = "weaponThrowState";
 
@@ -22,7 +23,11 @@ public class PlayerThrowWeaponState : PlayerAbilityState
 
         //Store player position
         // to be used with wall and ground throw
-        //startPos = player.transform.position;
+        if(player.Core.CollisionSenses.IsGrounded())
+        {
+            startPos = player.transform.position;
+            player.Core.Movement.SetVelocityX(0f);
+        }
 
         player.weaponController.OnThrowEnd += HandleThrowEnd;
     }
@@ -39,6 +44,12 @@ public class PlayerThrowWeaponState : PlayerAbilityState
         //Avoid to execute stuff while is exiting
         if (isExitingState) return;
 
+        if (player.Core.CollisionSenses.IsGrounded())
+        {
+            startPos = player.transform.position;
+            player.Core.Movement.SetVelocityX(0f);
+        }
+
         attackInputStop = player.InputHandler.AttackInputStop;
         attackInput = player.InputHandler.AttackInput;
 
@@ -53,7 +64,7 @@ public class PlayerThrowWeaponState : PlayerAbilityState
                 yInputRaw = player.InputHandler.RawMovementInput.y;
 
                 player.Anim.SetFloat("yInput", yInputRaw);
-                player.weaponController.ThrowState.SetThrowingDirectionAndCharge(new Vector3(xInput, yInput, 0f), 0);
+                player.weaponController.ThrowState.SetThrowingDirectionAndCharge(new Vector3(xInput, Mathf.Max(0, yInput), 0f), 0);
                 player.weaponController.StateMachine.ChangeState(player.weaponController.ThrowState);
             }
         }

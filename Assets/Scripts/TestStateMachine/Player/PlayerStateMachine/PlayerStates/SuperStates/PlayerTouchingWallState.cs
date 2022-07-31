@@ -33,7 +33,7 @@ public class PlayerTouchingWallState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        player.AnimateCameraChannel.RaiseEvent(core.Movement.FacingDirection);
+        player.AnimateCameraChannel.RaiseEvent(core.Movement.FacingDirection,0);
     }
 
     public override void Exit()

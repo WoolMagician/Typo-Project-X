@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TestChest1
   m_EditorClassIdentifier: 
   _guid: 4a892527a516bd14fadac925d1afa9e6
-  _isOpened: 0
+  _isOpened: 1
   _chestTypeSO: {fileID: 11400000, guid: 8826518ae51a269489f73768d22e7bef, type: 2}
   _containedItemSO: {fileID: 11400000, guid: 7da455751421f0746a2c04de7fd1c236, type: 2}

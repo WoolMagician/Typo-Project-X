@@ -23,10 +23,13 @@ public class Player : MonoBehaviour
     public PlayerLedgeClimbState LedgeClimbState { get; private set; }
     public PlayerSwingGrabState SwingGrabState { get; private set; }
 
+    public PlayerIsZSwapState IsZSwapState { get; private set; }
+    public PlayerCanZSwapState CanZSwapState { get; private set; }
+
     public PlayerThrowWeaponState ThrowWeaponState { get; private set; }
 
     public PlayerData playerData;
-    public IntEventChannelSO AnimateCameraChannel;
+    public Vector2EventChannel AnimateCameraChannel;
     #endregion
 
     #region Components
@@ -69,6 +72,9 @@ public class Player : MonoBehaviour
         LedgeClimbState = new PlayerLedgeClimbState(this, "ledgeClimbState");
         SwingGrabState = new PlayerSwingGrabState(this, "swingGrabState");
         ThrowWeaponState = new PlayerThrowWeaponState(this, "");
+
+        IsZSwapState = new PlayerIsZSwapState(this, "zSwapState");
+        CanZSwapState = new PlayerCanZSwapState(this, "zSwapState");
     }
 
     private void Start()
@@ -92,6 +98,16 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Other Functions
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Core.CollisionSenses.OnPlayerColliderTriggerEnter(other);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Core.CollisionSenses.OnPlayerColliderTriggerExit(other);
+    }
 
     //public void SetColliderHeight(float height)
     //{

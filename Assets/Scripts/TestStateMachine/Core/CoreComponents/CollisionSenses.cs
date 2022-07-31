@@ -65,6 +65,9 @@ public class CollisionSenses : CoreComponent
     public Vector3 groundNormal = Vector3.zero;
     public Vector3 groundHit = Vector3.zero;
     public Collider groundCollider = default;
+    
+    private bool _zSwapAllowUp = false;
+    private bool _zSwapAllowDown = false;
 
     [SerializeField] private Transform playerTransform;
 
@@ -90,6 +93,13 @@ public class CollisionSenses : CoreComponent
                hit.collider.gameObject.tag != "Chest";
     }
 
+    //public bool ZSwapObject
+    //{
+    //    get => Physics.Raycast(LedgeCheckHorizontal.position, Vector3.forward, out RaycastHit hit, 1f, whatIsGround) &&
+    //           hit.collider.gameObject.tag != "SwingObject" &&
+    //           hit.collider.gameObject.tag != "Chest";
+    //}
+
     public bool Swing
     {
         get => Physics.Raycast(LedgeCheckHorizontal.position, Vector3.right * core.Movement.FacingDirection, out RaycastHit hit, wallCheckDistance, whatIsSwing) && hit.collider.gameObject.tag == "SwingObject";
@@ -105,6 +115,60 @@ public class CollisionSenses : CoreComponent
         get => Physics.Raycast(WallCheck.position, Vector3.right * -core.Movement.FacingDirection, wallCheckDistance, whatIsGround);
     }
 
+    public bool CanZSwap(int inputY)
+    {
+        if(inputY == 1 && _zSwapAllowUp)
+        {
+            return true;
+        }
+        else if(inputY == -1 && _zSwapAllowDown)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void OnPlayerColliderTriggerEnter(Collider other)
+    {
+        if(other != null)
+        {
+            ZSwapTrigger trigger = other.GetComponent<ZSwapTrigger>();
+
+            if (trigger != null)
+            {
+                switch (trigger.ZSwapType)
+                {
+                    case ZSwapType.Upwards:
+                        _zSwapAllowUp = true;
+                        break;
+                    case ZSwapType.Downwards:
+                        _zSwapAllowDown = true;
+                        break;
+                }
+            }
+        }
+    }
+
+    public void OnPlayerColliderTriggerExit(Collider other)
+    {
+        if (other != null)
+        {
+            ZSwapTrigger trigger = other.GetComponent<ZSwapTrigger>();
+
+            if (trigger != null)
+            {
+                switch (trigger.ZSwapType)
+                {
+                    case ZSwapType.Upwards:
+                        _zSwapAllowUp = false;
+                        break;
+                    case ZSwapType.Downwards:
+                        _zSwapAllowDown = false;
+                        break;
+                }
+            }            
+        }
+    }
 
     public bool IsGrounded()
     {

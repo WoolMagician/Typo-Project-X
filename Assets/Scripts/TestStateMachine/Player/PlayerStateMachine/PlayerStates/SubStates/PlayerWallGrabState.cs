@@ -2,7 +2,7 @@
 
 public class PlayerWallGrabState : PlayerTouchingWallState
 {
-    private Vector2 holdPosition;
+    private Vector3 holdPosition;
 
     public PlayerWallGrabState(Player player, string animBoolName) : base(player, animBoolName)
     {

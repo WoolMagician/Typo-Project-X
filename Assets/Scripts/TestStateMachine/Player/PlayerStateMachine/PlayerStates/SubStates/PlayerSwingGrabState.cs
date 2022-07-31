@@ -44,7 +44,7 @@ public class PlayerSwingGrabState : PlayerState
         swingPos = DetermineSwingObjectPosition();
 
         startPos.Set(swingPos.x, swingPos.y -(player.MovementCollider.height / 2), 0f);
-        player.AnimateCameraChannel.RaiseEvent(core.Movement.FacingDirection);
+        player.AnimateCameraChannel.RaiseEvent(core.Movement.FacingDirection,0);
         player.transform.position = startPos;
     }
 

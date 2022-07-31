@@ -65,7 +65,7 @@ public class PlayerInAirState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        player.AnimateCameraChannel.RaiseEvent(0);
+        player.AnimateCameraChannel.RaiseEvent(0, 0);
     }
 
     public override void Exit()

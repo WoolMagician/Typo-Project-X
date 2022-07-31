@@ -34,7 +34,7 @@ public class PlayerGroundedState : PlayerState
     {
         base.Enter();
         player.JumpState.ResetAmountOfJumpsLeft();
-        player.AnimateCameraChannel.RaiseEvent(0);
+        player.AnimateCameraChannel.RaiseEvent(0,0);
     }
 
     public override void Exit()
@@ -53,7 +53,14 @@ public class PlayerGroundedState : PlayerState
         attackInputStop = player.InputHandler.AttackInputStop;
         grabInput = player.InputHandler.GrabInput;
 
-        if (JumpInput && player.JumpState.CanJump())
+        if (isExitingState || player.Anim.GetBool("zSwapState")) return;
+
+        if (isGrounded && xInput == 0 && yInput != 0 && player.Core.CollisionSenses.CanZSwap(yInput))
+        {
+            player.CanZSwapState.SetZSwapDirection(yInput);
+            stateMachine.ChangeState(player.CanZSwapState);
+        }
+        else if (JumpInput && player.JumpState.CanJump())
         {
             stateMachine.ChangeState(player.JumpState);
         }

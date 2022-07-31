@@ -50,12 +50,12 @@ public class PlayerLedgeClimbState : PlayerState
         player.transform.position = detectedPos;
         cornerPos = DetermineCornerPosition();
 
-        startPos.Set(cornerPos.x - (core.Movement.FacingDirection * playerData.startOffset.x), cornerPos.y - playerData.startOffset.y, 0f);
-        stopPos.Set(cornerPos.x + (core.Movement.FacingDirection * playerData.stopOffset.x), cornerPos.y + playerData.stopOffset.y, 0f);
+        startPos.Set(cornerPos.x - (core.Movement.FacingDirection * playerData.startOffset.x), cornerPos.y - playerData.startOffset.y, player.transform.position.z);
+        stopPos.Set(cornerPos.x + (core.Movement.FacingDirection * playerData.stopOffset.x), cornerPos.y + playerData.stopOffset.y, player.transform.position.z);
         stopPos = GetUpdatedStopPosition();
 
         player.transform.position = startPos;
-        player.AnimateCameraChannel.RaiseEvent(core.Movement.FacingDirection);
+        player.AnimateCameraChannel.RaiseEvent(core.Movement.FacingDirection, 0);
 
     }
 
@@ -157,7 +157,7 @@ public class PlayerLedgeClimbState : PlayerState
         Physics.Raycast(core.CollisionSenses.LedgeCheckHorizontal.position + (Vector3)(workspace), Vector3.down, out RaycastHit yHit, core.CollisionSenses.LedgeCheckHorizontal.position.y - core.CollisionSenses.WallCheck.position.y + 0.015f, core.CollisionSenses.WhatIsGround);
         float yDist = yHit.distance;
 
-        workspace.Set(core.CollisionSenses.WallCheck.position.x + (xDist * core.Movement.FacingDirection), core.CollisionSenses.LedgeCheckHorizontal.position.y - yDist,0f);
+        workspace.Set(core.CollisionSenses.WallCheck.position.x + (xDist * core.Movement.FacingDirection), core.CollisionSenses.LedgeCheckHorizontal.position.y - yDist, player.transform.position.z);
         return workspace;
     }
 
