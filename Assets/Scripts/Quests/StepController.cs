@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+
 //this script needs to be put on the actor, and takes care of the current step to accomplish.
 //the step contains a dialogue and maybe an event.
-
 public class StepController : MonoBehaviour
 {
     [Header("Data")]
@@ -27,7 +24,7 @@ public class StepController : MonoBehaviour
     //check if character is actif. An actif character is the character concerned by the step.
     private DialogueDataSO _currentDialogue;
 
-    public bool isInDialogue; //Consumed by the state machine
+    public bool _isInDialogue; //Consumed by the state machine
 
     private void Start()
     {
@@ -36,18 +33,6 @@ public class StepController : MonoBehaviour
             dialogueShot.transform.parent = null;
             dialogueShot.SetActive(false);
         }
-
-    }
-
-    void PlayDefaultDialogue()
-    {
-
-        if (_defaultDialogue != null)
-        {
-            _currentDialogue = _defaultDialogue;
-            StartDialogue();
-        }
-
     }
 
     //start a dialogue when interaction
@@ -57,31 +42,43 @@ public class StepController : MonoBehaviour
     {
         if (_gameStateManager.CurrentGameState == GameState.Gameplay)
         {
-            DialogueDataSO displayDialogue = _questData.InteractWithCharacter(_actor, false, false);
-            //Debug.Log("dialogue " + displayDialogue + "actor" + _actor);
-            if (displayDialogue != null)
+            DialogueDataSO dialogueToDisplay = _questData.InteractWithCharacter(_actor, false, false);
+
+            if (dialogueToDisplay != null)
             {
-                _currentDialogue = displayDialogue;
-                StartDialogue();
+                this.StartDialogue(dialogueToDisplay);
             }
             else
             {
-                PlayDefaultDialogue();
+                this.StartDialogue(_defaultDialogue);
             }
         }
-
     }
 
-    void StartDialogue()
+    void StartDialogue(DialogueDataSO dialogue)
     {
+        if (dialogue == null) return;
+
+        //Set current dialogue
+        _currentDialogue = dialogue;
+
+        //Raise start dialouge event
         _startDialogueEvent.RaiseEvent(_currentDialogue);
+
+        //Attach end dialogue handler
         _endDialogueEvent.OnEventRaised += EndDialogue;
-        StopConversation();
+
+        //Make sure to stop any previous dialogues
+        this.StopConversation();
+
+        //Attach win and lose events
         _winDialogueEvent.OnEventRaised += PlayWinDialogue;
         _loseDialogueEvent.OnEventRaised += PlayLoseDialogue;
-        isInDialogue = true;
-        if (dialogueShot)
-            dialogueShot.SetActive(true);
+
+        //Set is in dialogue
+        this._isInDialogue = true;
+
+        this.SetDialogueCamera(true);
     }
 
     void EndDialogue(int dialogueType)
@@ -89,10 +86,16 @@ public class StepController : MonoBehaviour
         _endDialogueEvent.OnEventRaised -= EndDialogue;
         _winDialogueEvent.OnEventRaised -= PlayWinDialogue;
         _loseDialogueEvent.OnEventRaised -= PlayLoseDialogue;
-        ResumeConversation();
-        isInDialogue = false;
+
+        this.ResumeConversation();
+        this._isInDialogue = false;
+        this.SetDialogueCamera(false);
+    }
+
+    private void SetDialogueCamera(bool flag)
+    {
         if (dialogueShot)
-            dialogueShot.SetActive(false);
+            dialogueShot.SetActive(flag);
     }
 
     void PlayLoseDialogue()
@@ -100,13 +103,7 @@ public class StepController : MonoBehaviour
         if (_questData != null)
         {
             DialogueDataSO displayDialogue = _questData.InteractWithCharacter(_actor, true, false);
-            if (displayDialogue != null)
-            {
-                _currentDialogue = displayDialogue;
-                StartDialogue();
-
-            }
-
+            StartDialogue(displayDialogue);           
         }
     }
 
@@ -115,11 +112,7 @@ public class StepController : MonoBehaviour
         if (_questData != null)
         {
             DialogueDataSO displayDialogue = _questData.InteractWithCharacter(_actor, true, true);
-            if (displayDialogue != null)
-            {
-                _currentDialogue = displayDialogue;
-                StartDialogue();
-            }
+            StartDialogue(displayDialogue);
         }
     }
 

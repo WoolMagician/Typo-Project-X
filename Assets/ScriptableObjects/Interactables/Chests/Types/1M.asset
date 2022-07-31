@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece2712540f004a46a5dd6344e55f5ff, type: 3}
+  m_Name: 1M
+  m_EditorClassIdentifier: 
+  _guid: 74e3fabcccc9e1d4e928da7de0de8096
+  _type: 3
+  _closedChestData:
+    _sprite: {fileID: -7726576587298057956, guid: 0be2aa9f7a8c70243a395373bb86bb7a,
+      type: 3}
+    _colliderSize: {x: 0.3, y: 0.2581144, z: 1}
+  _openedChestData:
+    _sprite: {fileID: 2556174680305430907, guid: 0be2aa9f7a8c70243a395373bb86bb7a,
+      type: 3}
+    _colliderSize: {x: 0.3, y: 0.155, z: 1}
+  _isoClosedChestData:
+    _sprite: {fileID: 0}
+    _colliderSize: {x: 0, y: 0, z: 0}
+  _isoOpenedChestData:
+    _sprite: {fileID: 0}
+    _colliderSize: {x: 0, y: 0, z: 0}

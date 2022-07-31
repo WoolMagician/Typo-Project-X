@@ -234,9 +234,7 @@ public class UIInventory : MonoBehaviour
 
     void ShowItemInformation(ItemSO item)
     {
-        bool[] availabilityArray = _currentInventory.IngredientsAvailability(item.IngredientsList);
-
-        _inspectorPanel.FillInspector(item, availabilityArray);
+        _inspectorPanel.FillInspector(item);
         _inspectorPanel.gameObject.SetActive(true);
     }
 

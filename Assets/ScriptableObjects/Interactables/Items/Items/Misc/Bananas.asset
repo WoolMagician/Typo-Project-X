@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8325b1b21fdcf479793a8d76aa895e, type: 3}
+  m_Name: Bananas
+  m_EditorClassIdentifier: 
+  _guid: dbc3ec812559124409a4b1ec4bbc2f04
+  _name:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _previewImage: {fileID: 2159330636136061232, guid: e70c3dc25f0d0fb47a88485af1ecdee8,
+    type: 3}
+  _description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _healthResorationValue: 0
+  _itemType: {fileID: 11400000, guid: 991f045e044b20f4abad6c2b6fa69fa3, type: 2}
+  _prefab: {fileID: 0}
+  references:
+    version: 1

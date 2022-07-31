@@ -82,7 +82,7 @@ namespace Typo.Utilities.Cameras
 
         public FloatEventChannelSO VerticalRotationChannelSO;
         public FloatEventChannelSO HorizontalRotationChannelSO;
-        public IntEventChannelSO AnimationChannelSO;
+        public Vector2EventChannel AnimationChannelSO;
 
         #endregion
 
@@ -228,20 +228,35 @@ namespace Typo.Utilities.Cameras
 
         
 
-        private void HandleAnimationChannelSO(int value)
+        private void HandleAnimationChannelSO(Vector2 value)
         {
-            if (value == 0)
-            {
-                Rotation.AutoRotateTo(0, Rotation.VerticalRotation, 0.25f);
-            }
-            else if (value == 1)
-            {
-                Rotation.AutoRotateTo(12, Rotation.VerticalRotation, 0.25f);
-            }
-            else if (value == -1)
-            {
-                Rotation.AutoRotateTo(-12, Rotation.VerticalRotation, 0.25f);
-            }
+            //if (value.x == 0)
+            //{
+            //    Rotation.AutoRotateTo(0, Rotation.VerticalRotation, 0.25f);
+            //}
+            //else if (value.x == 1)
+            //{
+            //    Rotation.AutoRotateTo(12, Rotation.VerticalRotation, 0.25f);
+            //}
+            //else if (value.x == -1)
+            //{
+            //    Rotation.AutoRotateTo(-12, Rotation.VerticalRotation, 0.25f);
+            //}
+
+            Rotation.AutoRotateTo(value.x * 12, (value.y == 0 ? 12 : (value.y == -1 ? value.y * 2 : value.y * 22)), 0.25f);
+
+            //if (value.y == 0)
+            //{
+            //    Rotation.AutoRotateTo(Rotation.HorizontalRotation, 0, 0.25f);
+            //}
+            //else if (value.y == 1)
+            //{
+            //    Rotation.AutoRotateTo(Rotation.HorizontalRotation, 6, 0.25f);
+            //}
+            //else if (value.y == -1)
+            //{
+            //    Rotation.AutoRotateTo(Rotation.HorizontalRotation, -6, 0.25f);
+            //}
         }
 
         void Update()

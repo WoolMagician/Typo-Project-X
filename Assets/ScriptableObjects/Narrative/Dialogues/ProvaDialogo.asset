@@ -12,8 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8da22c2f22b3cf4da8b52aba1ab3d91, type: 3}
   m_Name: ProvaDialogo
   m_EditorClassIdentifier: 
-  _lines: []
-  _dialogueType: 0
+  _lines:
+  - _actorID: 11
+    _textList:
+    - m_TableReference:
+        m_TableCollectionName: Questline Dialogue
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: L1-D1-ProvaDialogo
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    _choices: []
+  _dialogueType: 3
   _endOfDialogueEvent: {fileID: 11400000, guid: c596868745243dc448bc63ee75cb724b,
     type: 2}
   references:

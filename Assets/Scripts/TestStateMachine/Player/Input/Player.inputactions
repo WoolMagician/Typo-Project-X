@@ -38,25 +38,9 @@
                     "interactions": ""
                 },
                 {
-                    "name": "DashDirection",
-                    "type": "Value",
-                    "id": "4f82a0cb-8525-49a6-99f9-b2785d6dc619",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "PrimaryAttack",
                     "type": "Button",
                     "id": "726bea11-c4b5-46d7-ab92-51e4954f04f1",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "SecondaryAttack",
-                    "type": "Button",
-                    "id": "10d86b8a-51f4-4b82-83a6-9d27277fb0bc",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -197,28 +181,6 @@
                 },
                 {
                     "name": "",
-                    "id": "27fbab0c-3611-42ee-a6b5-13871aa89195",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "DashDirection",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "de047fe7-1093-4c64-9e67-98c9ebfbf2a4",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "DashDirection",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "f1306478-882e-4a3c-adb4-6fd5d4a02723",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -236,28 +198,6 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "PrimaryAttack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4d45ce02-8b58-44bf-82ad-721c8c65e616",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "SecondaryAttack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c35e3aa5-0ed9-4fc8-a0c0-e5486e177b03",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "SecondaryAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

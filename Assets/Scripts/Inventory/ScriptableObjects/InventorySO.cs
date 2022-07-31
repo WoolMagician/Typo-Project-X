@@ -11,6 +11,11 @@ public class InventorySO : ScriptableObject
     [SerializeField] private List<ItemStack> _items = new List<ItemStack>();
     [SerializeField] private List<ItemStack> _defaultItems = new List<ItemStack>();
 
+    [SerializeField] private ItemSO _weapon = default;
+    [SerializeField] private ItemSO _pants = default;
+    [SerializeField] private ItemSO _jewel = default;
+    [SerializeField] private ItemSO _umbrella = default;
+
     public List<ItemStack> Items => _items;
 
     public void Init()
@@ -95,30 +100,5 @@ public class InventorySO : ScriptableObject
         }
 
         return 0;
-    }
-
-    public bool[] IngredientsAvailability(List<ItemStack> ingredients)
-    {
-        if (ingredients == null)
-            return null;
-        bool[] availabilityArray = new bool[ingredients.Count];
-
-        for (int i = 0; i < ingredients.Count; i++)
-        {
-            availabilityArray[i] = _items.Exists(o => o.Item == ingredients[i].Item && o.Amount >= ingredients[i].Amount);
-
-        }
-        return availabilityArray;
-
-
-    }
-    public bool hasIngredients(List<ItemStack> ingredients)
-    {
-
-        bool hasIngredients = !ingredients.Exists(j => !_items.Exists(o => o.Item == j.Item && o.Amount >= j.Amount));
-
-        return hasIngredients;
-
-
     }
 }

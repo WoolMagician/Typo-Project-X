@@ -74,27 +74,6 @@ public class InventoryManager : MonoBehaviour
         _saveSystem.SaveDataToDisk();
     }
 
-    private void CookRecipeEventRaised(ItemSO recipe)
-    {
-        if (_currentInventory.Contains(recipe))
-        {
-            List<ItemStack> ingredients = recipe.IngredientsList;
-
-            //remove ingredients (when it's a consumable)
-            if (_currentInventory.hasIngredients(ingredients))
-            {
-                for (int i = 0; i < ingredients.Count; i++)
-                {
-                    if ((ingredients[i].Item.ItemType.ActionType == ItemInventoryActionType.Use))
-                        _currentInventory.Remove(ingredients[i].Item, ingredients[i].Amount);
-                }
-                _currentInventory.Add(recipe.ResultingDish);
-            }
-        }
-
-        _saveSystem.SaveDataToDisk();
-    }
-
     private void UseItemEventRaised(ItemSO item)
     {
         RemoveItem(item);
